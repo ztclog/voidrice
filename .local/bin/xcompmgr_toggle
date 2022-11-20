@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if pidof xcompmgr >/dev/null; then
+	notify-send "Turning xcompmgr OFF"
+	pkill xcompmgr &
+else
+	notify-send "Turning xcompmgr ON"
+	xcompmgr -cfrtCF -t -5 -l -5 -r 4.2 -o 0.55 &
+#	xcompmgr -c &
+fi
+

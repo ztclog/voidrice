@@ -1,0 +1,41 @@
+#!/bin/sh
+# ctg means commands toggle
+# variables
+cmds="clash picom xcompmagr wp_change"
+
+if [ -n "$1" ]; then
+	xdotool type "$cmds_chosen"
+else
+	cmds_chosen=$1
+fi
+
+case "$(printf "clash\\npicom\\nxcompmgr\\nwp_change\\nscreenkey" | dmenu -l 5 -i -p "toggle what?")" in
+    "clash")
+	    if pidof clash >/dev/null; then
+		    notify-send "Turning clash OFF"
+		    pkill clash &
+	    else
+		    notify-send "Turning clash ON"
+		    clash &
+	    fi;;
+    "picom")
+	    if pidof picom >/dev/null; then
+		    notify-send "Turning picom OFF"
+		    pkill picom &
+	    else
+		    notify-send "Turning picom ON"
+		    picom -b &
+	    fi;;
+    "xcompmgr")
+	    if pidof xcompmgr >/dev/null; then
+		    notify-send "Turning xcompmgr OFF"
+		    pkill xcompmgr &
+	    else
+		    notify-send "Turning xcompmgr ON"
+		    xcompmgr -cfrtCF -t -5 -l -5 -r 4.2 -o 0.55 &
+	    fi;;
+    "wp_change")
+	    killall wp_change && notify-send "Turning wp_change OFF" || wp_change &;;
+    "screenkey")
+	    killall screenkey && notify-send "Turning screenkey OFF" || notify-send " Turning screenkey ON" && screenkey &;;
+esac

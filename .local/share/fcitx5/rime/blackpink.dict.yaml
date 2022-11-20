@@ -1,0 +1,26 @@
+# 注意這裏以 --- ... 分別標記出 YAML 文檔的起始與結束位置
+# 在 ... 標記之後的部份就不會作 YAML 文檔來解讀
+
+---
+name: blackpink
+version: "2021.10.27"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - luna_pinyin
+  - sougoubiaozhun
+  - movies
+  - names
+  - dizhi
+  - computer
+  - cn_en
+  - moegirl
+  - zhwiki
+...
+
+arch	a r ch	99999
+cece140607@163.com	ce	99999
+cece140607@163.com	ce c	99999
+cece140607@163.com	ce ce	99999
+sudo	su do	99999
+pacman	pacman	99999

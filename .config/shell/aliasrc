@@ -1,0 +1,33 @@
+#!/bin/sh
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+# Use $XINITRC variable if file exists.
+# [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# Verbosity and settings that you pretty much just always are going to want.
+
+# You can add comments to these files with #
+alias \
+	cfg="cd ${XDG_CONFIG_HOME:-$HOME/.config} && ls" \
+	clo="cd $HOME/.local/bin && ls"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	cl="clear" \
+	l="ls -al" \
+	la="ls -a" \
+	ll="ls -al" \
+	ra="ranger" \
+	rac="ranger-cd" \
+	nl="neofetch | lolcat" 
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv"

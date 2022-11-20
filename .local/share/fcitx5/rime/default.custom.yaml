@@ -1,0 +1,31 @@
+patch:
+  style:
+    horizontal: true
+  schema_list:
+    - schema: luna_pinyin_simp
+    - schema: double_pinyin
+  switches:
+  - name: ascii_mode
+    reset: 1
+    states: [ 中文, 西文 ]
+  switcher:
+    abbreviate_options: true
+    caption: "〔方案选择〕"
+    fold_options: true
+    hotkeys:
+      - F4
+  key_binder:
+    bindings:
+      - {accept: minus, send: Page_Up, when: has_menu}
+      - {accept: equal, send: Page_Down, when: has_menu}
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: commit_code
+      Control_L: noop
+      Control_R: noop
+      Eisu_toggle: clear
+      Shift_L: commit_code
+      Shift_R: commit_code    
+  menu:
+    page_size: 5

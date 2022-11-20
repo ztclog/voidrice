@@ -1,0 +1,14 @@
+[Default Applications]
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
+application/postscript=pdf.desktop;
+application/pdf=mupdf.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;
+video/x-matroska=video.desktop
+inode/directory=file.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+text/html=google-chrome.desktop

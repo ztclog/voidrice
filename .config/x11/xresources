@@ -1,0 +1,17 @@
+// !! Transparency (0-1):
+*.alpha: 0.5
+
+!! Set a default font and font size as below:
+*.font: Monospace:size=10:style=Italic
+
+//xterm fonts setting
+XTerm.vt100.faceName: Monospace:style=Italic
+XTerm.vt100.faceSize: 14
+
+// Applications without fontconfig support
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

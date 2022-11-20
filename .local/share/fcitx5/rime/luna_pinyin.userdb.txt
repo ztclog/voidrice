@@ -1,0 +1,126 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	125
+#@/user_id	Arch-PG0-Doublepinyin
+a 	啊	c=2 d=1.48251 t=117
+a a a a 	啊啊啊啊	c=1 d=0.895834 t=125
+a li 	阿里	c=0 d=0.0951229 t=125
+a li yun 	阿里雲	c=1 d=0.955997 t=125
+an quan 	安全	c=1 d=0.995012 t=125
+ba dun 	巴頓	c=1 d=1 t=88
+bei fen 	備份	c=3 d=2.14079 t=125
+bei fen wen jian 	備份文件	c=1 d=0.927743 t=125
+ben ji 	本機	c=1 d=1 t=79
+bian ji 	編輯	c=0 d=0.1 t=54
+bu cheng gong 	不成功	c=1 d=1 t=93
+bu cuo de 	不錯的	c=1 d=1 t=6
+bu dao 	不到	c=0 d=0.0985112 t=125
+bu dong 	不懂	c=0 d=0.0878095 t=125
+bu neng 	不能	c=2 d=1.99005 t=97
+bu yi yang 	不一樣	c=0 d=0.1 t=83
+bu yi yang a 	不一樣啊	c=1 d=1 t=84
+can shi 	蠶食	c=1 d=1 t=70
+can shu 	參數	c=1 d=1 t=71
+cha kan 	查看	c=0 d=0.1 t=59
+ci dian 	詞典	c=0 d=0.1 t=123
+da wei 	大衛	c=1 d=1.09501 t=86
+da wei fen qi 	大衛芬奇	c=1 d=1 t=87
+dai ma 	代碼	c=1 d=1 t=125
+de 	的	c=3 d=2.69541 t=103
+di zhi 	地址	c=1 d=0.932394 t=125
+fang an 	方案	c=0 d=0.0882497 t=125
+fang an xuan ze 	方案選擇	c=1 d=0.88692 t=125
+fang kuai 	方塊	c=1 d=1 t=74
+fen qi 	芬奇	c=1 d=1.1 t=86
+fen qu 	分區	c=1 d=1 t=89
+ge shi 	格式	c=1 d=1 t=104
+gua zai 	掛在	c=1 d=0.960789 t=125
+gua zai 	掛載	c=1 d=0.965605 t=125
+hai xing 	還行	c=0 d=0.1 t=4
+hai xing ba 	還行吧	c=1 d=1 t=47
+han shu 	函數	c=1 d=1 t=109
+he 	和	c=1 d=1 t=108
+jian ti 	簡體	c=3 d=2.99573 t=49
+jian ti shu chu 	簡體輸出	c=1 d=1 t=46
+kai hei la 	開黑啦	c=1 d=1 t=75
+kan 	看	c=0 d=0.0878095 t=125
+kan bu dong 	看不懂	c=1 d=1 t=53
+kan bu dong le 	看不懂了	c=1 d=0.882497 t=125
+kan lai 	看來	c=0 d=0.1 t=4
+kan lai hai xing 	看來還行	c=1 d=1 t=5
+kan lai shi 	看來是	c=1 d=0.980199 t=125
+ke 	可	c=0 d=0.1 t=54
+ke bian ji 	可編輯	c=1 d=1 t=55
+ke yi 	可以	c=0 d=0.1 t=117
+kong ge 	空格	c=1 d=1 t=59
+kuai jie 	快捷	c=1 d=1 t=66
+kuai su 	快速	c=0 d=0.1 t=59
+kuai su cha kan 	快速查看	c=1 d=1 t=60
+lai 	來	c=0 d=0.0980199 t=125
+lai zao le 	來早了	c=1 d=0.985112 t=125
+lai zi 	來自	c=1 d=1 t=106
+le 	了	c=0 d=0.0878095 t=125
+liang hang 	兩行	c=1 d=1 t=100
+liao jie 	瞭解	c=0 d=0.1 t=51
+lu you qi 	路由器	c=1 d=1 t=81
+nei he 	內核	c=1 d=1 t=69
+ni hao 	你好	c=12 d=10.1047 t=125
+ni shi 	你是	c=1 d=1 t=50
+pan 	盤	c=1 d=0.970446 t=125
+pei zhi 	配置	c=2 d=1.33998 t=125
+pei zhi wen jian 	配置文件	c=1 d=0.918512 t=125
+qi dong 	啓動	c=5 d=4.77195 t=105
+qing chu 	清楚	c=0 d=0.1 t=2
+ran jian 	然見	c=1 d=1 t=67
+ru he 	如何	c=4 d=3.07135 t=122
+ru shang 	如上	c=1 d=0.937067 t=125
+ru xia 	如下	c=1 d=1 t=99
+ruan jian 	軟件	c=1 d=1 t=57
+shan chu 	刪除	c=1 d=1 t=65
+shi 	是	c=1 d=1 t=101
+shou ji 	手機	c=1 d=0.995012 t=125
+shu chu 	輸出	c=0 d=0.1 t=45
+shu ru fa 	輸入法	c=1 d=0.904837 t=125
+shuang pin 	雙拼	c=3 d=2.33455 t=123
+shui 	誰	c=1 d=1 t=51
+sou suo 	搜索	c=0 d=0.0985112 t=125
+sou suo bu dao 	搜索不到	c=1 d=0.99005 t=125
+tian jia 	添加	c=0 d=0.1 t=101
+tong bu 	同步	c=2 d=1.8097 t=125
+wang pan 	網盤	c=1 d=0.941765 t=125
+wang ye 	網頁	c=1 d=1 t=107
+wen 	文	c=2 d=1.96531 t=125
+wen jian 	文件	c=0 d=0.0923116 t=125
+wo ye bu 	我也不	c=0 d=0.17827 t=51
+wo ye bu liao jie 	我也不瞭解	c=1 d=1 t=52
+wo ye bu qing chu 	我也不清楚	c=1 d=1 t=3
+xian 	閑	c=1 d=1 t=77
+xian shi 	顯示	c=1 d=1 t=82
+xian zhe 	閒着	c=1 d=1 t=76
+xu ni ji 	虛擬機	c=1 d=1 t=125
+xuan ze 	選擇	c=1 d=0.979611 t=125
+ying yong 	應用	c=1 d=1 t=68
+yong hu 	用戶	c=0 d=0.1 t=123
+yong hu ci dian 	用戶詞典	c=1 d=1 t=124
+you xi 	遊戲	c=1 d=1 t=90
+you xie 	有些	c=1 d=1 t=72
+yu 	與	c=1 d=1 t=80
+yun 	雲	c=0 d=0.0951229 t=125
+zao le 	早了	c=0 d=0.0980199 t=125
+zen 	怎	c=1 d=1 t=117
+zen me 	怎麼	c=2 d=1.21138 t=125
+zen me hui shi 	怎麼回事	c=5 d=4.20261 t=125
+zen me yang 	怎麼樣	c=1 d=1 t=119
+zhe 	着	c=1 d=1 t=78
+zhe ge 	這個	c=0 d=0.1 t=117
+zhe ge zhong wen ke yi a 	這個中文可以啊	c=1 d=1 t=118
+zhi hu 	支護	c=1 d=0.946485 t=125
+zhi hu 	知乎	c=2 d=1.34662 t=125
+zhong 	中	c=2 d=1.96536 t=125
+zhong wen 	中文	c=0 d=0.1 t=117
+zi ji 	自己	c=0 d=0.1 t=101
+zi ji tian jia 	自己添加	c=1 d=1 t=102
+zi ran ma 	自然碼	c=1 d=1 t=35
+zi ti 	字體	c=1 d=1 t=73

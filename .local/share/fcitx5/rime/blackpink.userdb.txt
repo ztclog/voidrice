@@ -1,0 +1,371 @@
+# Rime user dictionary
+#@/db_name	blackpink
+#@/db_type	userdb
+#@/rime_version	1.7.3
+#@/tick	418
+#@/user_id	Arch-PG0-Doublepinyin
+a 	啊	c=0 d=0.1 t=416
+a bao 	阿宝	c=1 d=1 t=415
+ai 	愛	c=1 d=0.513397 t=418
+an zhuang 	安裝	c=2 d=1.19783 t=418
+ba dun 	巴頓	c=1 d=1 t=258
+bai 	白	c=0 d=0.1 t=367
+bai bian 	百變	c=0 d=0.0927743 t=418
+bai bian ma ding 	百變馬丁	c=1 d=0.932394 t=418
+bang de 	邦德	c=1 d=0.985112 t=418
+bao cun 	保存	c=1 d=1 t=282
+bao guan 	保管	c=0 d=0.1 t=1
+bao guan ku 	保管庫	c=1 d=1 t=2
+bei fen 	備份	c=3 d=1.84589 t=418
+ben di 	本地	c=2 d=1.44167 t=418
+ben jie ming 	本傑明	c=1 d=1 t=257
+bi ji ben 	筆記本	c=6 d=5.50022 t=418
+bi li 	比例	c=3 d=2.97025 t=405
+bian cheng 	變成	c=0 d=0.0951229 t=418
+biao zhi 	標誌	c=2 d=1.8696 t=418
+bu 	不	c=0 d=0.0722527 t=418
+bu cuo de 	不錯的	c=0 d=0.0995012 t=418
+bu jian 	部件	c=1 d=0.582748 t=418
+bu ke neng 	不可能	c=0 d=0.1 t=416
+bu neng 	不能	c=2 d=1.36199 t=418
+bu neng chu fa 	不能觸發	c=1 d=1 t=273
+bu neng yong 	不能用	c=3 d=2.87779 t=418
+bu xia zai 	不下載	c=1 d=0.726149 t=418
+bu xu yao 	不需要	c=1 d=1 t=328
+bu yao 	不要	c=0 d=0.097531 t=418
+bu yao da zi 	不要打字	c=1 d=0.499074 t=418
+bu yao lai le 	不要來了	c=1 d=0.980199 t=418
+cao zuo 	操作	c=0 d=0.1 t=378
+ce ce 	cece140607@163.com	c=1 d=1 t=384
+ceng ci 	層次	c=3 d=2.74358 t=344
+cha jian 	插件	c=0 d=0.057695 t=418
+chan wu 	產物	c=1 d=1 t=331
+cheng ben 	成本	c=1 d=1 t=335
+chong 	重	c=1 d=1 t=391
+chong ming ming 	重命名	c=1 d=1 t=392
+chu fa 	觸發	c=0 d=0.1 t=272
+chu lai 	出來	c=1 d=0.960789 t=418
+chu li de 	處理得	c=1 d=1 t=324
+chu mo ping 	觸摸屏	c=2 d=1.99501 t=269
+chuang jian 	創建	c=1 d=0.715338 t=418
+chuang kou 	窗口	c=0 d=0.0644036 t=418
+chuang kou zhuang shi yuan su 	窗口裝飾元素	c=1 d=0.647265 t=418
+chun xia 	春霞	c=1 d=1 t=240
+ci ku 	詞庫	c=5 d=4.59019 t=418
+ci wen jian 	此文件	c=1 d=1 t=351
+da 	打	c=2 d=1.02166 t=418
+da chu 	打出	c=2 d=1.85114 t=418
+da chu lai 	打出來	c=2 d=1.87528 t=418
+da kai 	打開	c=2 d=1.0652 t=418
+da ni 	打你	c=0 d=0.0511709 t=418
+da ni le 	打你了	c=1 d=0.514274 t=418
+da zi 	打字	c=1 d=0.951229 t=418
+dai 	帶	c=1 d=0.941765 t=418
+dan shi 	但是	c=1 d=1 t=334
+dao 	到	c=1 d=0.729789 t=418
+dao chu 	導出	c=1 d=0.680451 t=418
+de 	的	c=13 d=7.08685 t=418
+deng lu 	登錄	c=1 d=0.697676 t=418
+deng zhe 	等着	c=0 d=0.099005 t=418
+di si 	第四	c=0 d=0.0909373 t=418
+di si kuai 	第四塊	c=1 d=0.913931 t=418
+dian 	電	c=1 d=1 t=310
+dian fei 	電費	c=2 d=1.95123 t=303
+dian hua 	電話	c=1 d=1 t=250
+dian ying 	電影	c=0 d=0.0995012 t=418
+dou 	都	c=1 d=1 t=281
+du 	度	c=1 d=1 t=309
+duo shao 	多少	c=0 d=0.1 t=307
+en 	恩	c=0 d=0.1 t=243
+er yi 	而已	c=1 d=1 t=418
+fa 	法	c=2 d=1.82696 t=361
+fang huo qiang 	防火牆	c=1 d=0.895834 t=418
+fang kuai 	方塊	c=2 d=1.9459 t=418
+fen 	粉	c=0 d=0.1 t=244
+fu hao 	符號	c=1 d=0.985112 t=418
+fu ze ren 	負責人	c=2 d=2.07284 t=252
+fu zhi 	複製	c=2 d=0.75197 t=418
+gai le 	蓋了	c=0 d=0.099005 t=418
+gai le ge zhang 	蓋了個章	c=1 d=0.995012 t=418
+gai wei 	改爲	c=1 d=1 t=397
+ge 	個	c=0 d=0.099005 t=418
+ge ren 	個人	c=1 d=1 t=1
+ge shi 	格式	c=0 d=0.0941765 t=418
+ge shi de 	格式的	c=1 d=0.946485 t=418
+ge shou 	歌手	c=1 d=0.980199 t=418
+geng xin 	更新	c=1 d=1 t=287
+gong ju 	工具	c=1 d=1 t=277
+gong neng jian 	功能鍵	c=2 d=1.79187 t=418
+gong ye 	工業	c=0 d=0.1 t=294
+gong ye yong dian 	工業用電	c=1 d=1 t=302
+gong ye yong mei 	工業用煤	c=1 d=1 t=295
+gong yi 	工藝	c=1 d=0.637628 t=418
+gu shi 	故事	c=1 d=1 t=260
+gu tan 	固碳	c=2 d=2.03978 t=330
+guo 	過	c=0 d=0.0818731 t=418
+ha ha ha 	哈哈哈	c=1 d=0.603506 t=418
+ha ha ha ha 	哈哈哈哈	c=1 d=1 t=254
+hai shi 	還是	c=0 d=0.0995012 t=418
+hao ge ge 	好哥哥	c=1 d=0.628135 t=418
+he 	和	c=1 d=1 t=294
+hei 	黑	c=0 d=0.0822835 t=418
+hei ping 	黑屏	c=0 d=0.0818731 t=418
+hei ping guo 	黑屏過	c=1 d=0.822835 t=418
+hei ping guo 	黑蘋果	c=2 d=1.69198 t=418
+hen shao 	很少	c=1 d=0.609571 t=418
+hou 	後	c=1 d=1 t=410
+hou xuan 	候選	c=0 d=0.1 t=361
+hou xuan kuang 	候選框	c=2 d=1.98511 t=365
+hua dong 	滑動	c=0 d=0.1 t=378
+hua dong cao zuo 	滑動操作	c=1 d=1 t=379
+huan 	環	c=0 d=0.0701173 t=418
+hui 	會	c=0 d=0.0951229 t=418
+hui bian cheng 	會變成	c=1 d=0.955997 t=418
+hui yi 	會議	c=2 d=1.15553 t=418
+ji 	及	c=2 d=0.878095 t=418
+ji ke 	即可	c=1 d=1 t=398
+ji suan ji 	計算機	c=2 d=1.11877 t=418
+jia 	加	c=1 d=1 t=347
+jia ge 	價格	c=1 d=1.16961 t=333
+jia ge le 	價格了	c=1 d=1 t=297
+jia ge xie chu lai 	價格寫出來	c=1 d=1 t=305
+jia shang 	加上	c=2 d=1.96079 t=337
+jian 	見	c=1 d=0.612626 t=418
+jian dan 	簡單	c=0 d=0.1 t=367
+jian dan bai 	簡單白	c=1 d=1 t=368
+jian pan 	鍵盤	c=7 d=6.53706 t=418
+jian ti 	簡體	c=1 d=0.970446 t=418
+jian ti zhong wen 	简体中文	c=1 d=0.97531 t=418
+jiang 	將	c=1 d=1 t=396
+jiao shi 	教師	c=1 d=0.782705 t=418
+jie 	傑	c=0 d=0.0748264 t=418
+jie hun zheng 	結婚證	c=0 d=0.0985112 t=418
+jie hun zheng shang 	結婚證上	c=1 d=0.99005 t=418
+jie xi 	解析	c=1 d=1 t=343
+jin bu 	進步	c=0 d=0.0640824 t=418
+jin ru 	進入	c=1 d=0.818731 t=418
+jin xiu 	進修	c=1 d=0.786628 t=418
+jing mi 	靜謐	c=1 d=0.900325 t=418
+jing ran 	景冉	c=1 d=1 t=242
+jiu shi zhe yang 	就是这样	c=1 d=0.891366 t=418
+kan dai 	看待	c=1 d=0.927743 t=418
+kan lai 	看來	c=0 d=0.1 t=416
+kan lai bu ke neng a 	看來不可能啊	c=1 d=1 t=417
+kan lan 	坎壈	c=0 d=0.0995012 t=418
+kan lan ai hai shi bu cuo de 	坎壈愛還是不錯的	c=1 d=1 t=418
+ke yi 	可以	c=0 d=0.0489192 t=418
+ke yi zhe yang 	可以這樣	c=1 d=0.491644 t=418
+ku 	庫	c=0 d=0.1 t=1
+kuai 	塊	c=0 d=0.0909373 t=418
+kuai jie jian 	快捷键	c=2 d=1.99005 t=264
+kuang 	框	c=0 d=0.1 t=361
+lai le 	來了	c=0 d=0.097531 t=418
+le 	了	c=1 d=0.607802 t=418
+lei ji 	累計	c=2 d=1.98511 t=402
+li 	裏	c=1 d=1 t=300
+li bian 	裏邊	c=1 d=1 t=314
+lian jie 	鏈接	c=1 d=0.718924 t=418
+liu 	劉	c=1 d=1 t=235
+lu bo 	錄播	c=1 d=1 t=387
+lu zhi 	錄製	c=1 d=0.571209 t=418
+lun wen 	論文	c=0 d=0.193239 t=312
+lun wen de 	論文的	c=1 d=1 t=313
+lv dong 	律動	c=0 d=0.0574072 t=418
+lv dong tiao 	律動條	c=1 d=0.57695 t=418
+ma 	嗎	c=0 d=0.0565525 t=418
+ma ding 	馬丁	c=0 d=0.0927743 t=418
+mei guan xi 	沒關係	c=0 d=0.1 t=252
+mei shi de 	沒事的	c=1 d=0.965605 t=418
+mei you 	沒有	c=0 d=0.1 t=306
+mei you xie 	沒有寫	c=1 d=1 t=307
+mi ma 	密碼	c=0 d=0.0701173 t=418
+mi ma huan 	密碼環	c=2 d=1.19865 t=418
+mi yao huan 	密钥环	c=2 d=1.94176 t=389
+ming ci 	名词	c=1 d=0.995012 t=418
+ming zi 	名字	c=1 d=1 t=357
+mo hu 	模糊	c=0 d=0.1 t=366
+mo hu xiao guo 	模糊效果	c=1 d=1 t=367
+mo ren 	默認	c=3 d=2.88437 t=394
+na li 	哪裏	c=1 d=1 t=284
+nan 	男	c=1 d=0.759572 t=418
+neng 	能	c=2 d=1.20353 t=418
+neng yong 	能用	c=2 d=1.80086 t=418
+ni 	你	c=3 d=1.55072 t=418
+ni hao 	你好	c=8 d=5.61031 t=418
+ni le 	膩了	c=0 d=0.0499074 t=418
+ni liu 	逆流	c=1 d=1 t=322
+niu bi 	牛逼	c=1 d=0.621885 t=418
+nv 	女	c=1 d=0.755784 t=418
+pacman 	pacman	c=1 d=1 t=418
+pei zhi 	配置	c=1 d=0.67368 t=418
+pei zhi wen jian 	配置文件	c=1 d=1 t=274
+pin chu 	拼出	c=2 d=1.8509 t=418
+pin xie 	拼寫	c=1 d=0.955997 t=418
+ping guo 	蘋果	c=0 d=0.0822835 t=418
+pu shi 	普師	c=2 d=1.56945 t=418
+qi nian ji 	七年級	c=1 d=1 t=406
+qi yong 	启用	c=1 d=0.496585 t=418
+qiu qiu ni 	求求你	c=0 d=0.0970446 t=418
+qiu qiu ni le 	求求你了	c=1 d=0.97531 t=418
+qu nian 	去年	c=1 d=1 t=385
+qu xiao 	取消	c=1 d=1 t=393
+quan pin 	全拼	c=1 d=1 t=413
+re men 	热门	c=0 d=0.0995012 t=418
+re men dian ying 	热门電影	c=1 d=1 t=418
+ren ming 	人名	c=1 d=0.985112 t=418
+ren shu 	人數	c=2 d=1.9802 t=404
+ri han 	日韓	c=1 d=0.615697 t=418
+ru he 	如何	c=14 d=7.15755 t=418
+ru xia 	如下	c=1 d=1 t=349
+ruan jian 	軟件	c=2 d=1.95123 t=285
+san duan 	三段	c=1 d=1 t=321
+sen 	森	c=1 d=0.904837 t=418
+sen lin 	森林	c=1 d=0.909373 t=418
+shan 	姍	c=1 d=1 t=236
+shan 	珊	c=2 d=1.99501 t=238
+shan chu 	刪除	c=1 d=0.802519 t=418
+shang 	上	c=0 d=0.0985112 t=418
+shao lu 	燒錄	c=1 d=1 t=276
+she zhi 	設置	c=1 d=1 t=378
+shen lan 	深蓝	c=1 d=1 t=418
+shen me yi si 	什麼意思	c=1 d=1 t=418
+shi 	是	c=2 d=1.85642 t=350
+shi 	時	c=1 d=0.701173 t=418
+shi fan 	師範	c=0 d=0.0767206 t=418
+shi hao shi huai 	時好時壞	c=1 d=0.99005 t=418
+shi yao 	是要	c=1 d=1 t=336
+shi yong 	使用	c=1 d=1 t=279
+shu chu 	输出	c=1 d=0.937067 t=418
+shu ju 	數據	c=1 d=1 t=280
+shu ru 	輸入	c=1 d=1 t=360
+shu ru fa 	輸入法	c=1 d=0.970446 t=418
+shu ru kuang 	輸入框	c=1 d=1 t=359
+shuang pin 	双拼	c=1 d=1 t=409
+sou gou 	搜狗	c=2 d=1.95581 t=418
+su do 	sudo	c=2 d=1.16366 t=418
+sui 	隨	c=1 d=0.594521 t=418
+tai gao 	太高	c=2 d=1.9802 t=345
+teng xun 	騰訊	c=1 d=0.601231 t=418
+teng xun hui yi 	騰訊會議	c=3 d=1.67133 t=418
+tian jia 	添加	c=1 d=0.951229 t=418
+tiao 	條	c=0 d=0.0574072 t=418
+tiao dong 	跳動	c=1 d=0.600496 t=418
+tong bu 	同步	c=1 d=0.865022 t=418
+tu pian 	圖片	c=1 d=0.737123 t=418
+w i n d o w s 	Windows	c=1 d=0.923116 t=418
+wang ju xia 	王菊霞	c=1 d=1 t=241
+wang shu li 	王淑麗	c=2 d=0.748264 t=418
+wang xue 	王雪	c=0 d=0.1 t=243
+wang xue en 	王雪恩	c=1 d=1 t=244
+wei 	未	c=1 d=1.056 t=326
+wei 	爲	c=2 d=1.86071 t=382
+wei feng 	微风	c=1 d=0.690734 t=418
+wei gu tan 	未固碳	c=1 d=1 t=327
+wei shen me 	爲什麼	c=3 d=1.69621 t=418
+wei xin 	微信	c=2 d=1.97045 t=364
+wei zhi 	位置	c=1 d=1 t=363
+wen dang 	文檔	c=1 d=0.744532 t=418
+wen jian 	文件	c=6 d=2.85348 t=418
+wen jian jia 	文件夾	c=3 d=1.88381 t=418
+wen jian ma 	文件嗎	c=1 d=0.56836 t=418
+wo 	我	c=0 d=0.1 t=298
+wo de 	我的	c=1 d=0.625002 t=418
+wo lun wen 	我論文	c=1 d=1 t=299
+wo yao 	我要	c=1 d=0.561616 t=418
+wo yao da ni le 	我要打膩了	c=1 d=0.501576 t=418
+wo zhen bang 	我真棒	c=1 d=1 t=256
+wu 	無	c=2 d=1.53058 t=418
+wu fa shi yong 	無法使用	c=2 d=1.70017 t=418
+xi la zi mu 	希臘字母	c=1 d=0.985112 t=418
+xi tong 	系統	c=1 d=0.543351 t=418
+xia 	下	c=1 d=0.932394 t=418
+xia zai 	下載	c=0 d=0.0722527 t=418
+xian li 	獻禮	c=1 d=0.97531 t=418
+xian shi 	顯示	c=1 d=1 t=381
+xian zai jiu 	現在就	c=0 d=0.1 t=252
+xian zai jiu mei guan xi le 	現在就沒關係了	c=1 d=1 t=253
+xiao 	小	c=0 d=0.116262 t=418
+xiao cha jian 	小插件	c=1 d=0.579842 t=418
+xiao en 	肖恩	c=2 d=1.98506 t=418
+xiao guo 	效果	c=0 d=0.1 t=366
+xiao zu jian 	小组件	c=1 d=0.588605 t=418
+xie 	寫	c=1 d=1.0956 t=315
+xie chu lai 	寫出來	c=0 d=0.1 t=304
+xie shi 	楔石	c=1 d=0.918512 t=418
+xie zai 	卸載	c=1 d=0.843665 t=418
+xin 	新	c=1 d=1 t=263
+xu yao de 	需要的	c=1 d=1 t=339
+xuan ran 	渲染	c=1 d=0.666977 t=418
+xue xiao 	學校	c=1 d=0.790571 t=418
+yang cheng 	羊城	c=1 d=1 t=356
+yao qiu 	要求	c=1 d=1 t=346
+ye you 	也有	c=0 d=0.0852144 t=418
+ye you bei fen 	也有備份	c=1 d=0.856415 t=418
+yi dang 	一檔	c=0 d=0.1 t=406
+yi fen 	一分	c=0 d=0.1 t=406
+yi fen yi dang 	一分一檔	c=1 d=1 t=407
+yi hang 	一行	c=1 d=1 t=289
+yi zhi 	一直	c=0 d=0.0640824 t=418
+yi zhi jin bu 	一直進步	c=1 d=0.644036 t=418
+yin cang 	隱藏	c=1 d=1 t=271
+yin dao 	引導	c=3 d=2.76111 t=418
+yin ying 	陰影	c=3 d=1.98774 t=418
+yin yue 	音樂	c=3 d=1.76313 t=418
+ying gai shi 	應該是	c=1 d=1 t=298
+ying wen 	英文	c=1 d=1 t=383
+ying yong 	應用	c=1 d=0.740818 t=418
+yong 	用	c=3 d=2.01912 t=418
+yong le 	永樂	c=0 d=0.1 t=307
+yong le 	用了	c=1 d=1 t=311
+yong le duo shao 	永樂多少	c=1 d=1 t=308
+yong mei 	用煤	c=0 d=0.1 t=294
+you 	有	c=4 d=2.19288 t=418
+you shi 	有時	c=3 d=1.47213 t=418
+you shi hou 	有時候	c=2 d=1.29181 t=418
+yuan jiao 	圆角	c=1 d=0.657047 t=418
+yuan lai shi 	原來是	c=0 d=0.1 t=417
+yuan lai shi zhe yang 	原來是這樣	c=1 d=1 t=418
+yuan shi 	元氏	c=3 d=1.2405 t=418
+yuan shi fu ze ren 	元氏負責人	c=1 d=1 t=248
+yuan shi shi fan 	元氏師範	c=1 d=0.771052 t=418
+yuan su 	元素	c=0 d=0.0644036 t=418
+zai 	在	c=2 d=1.86502 t=312
+zai nin 	在您	c=1 d=0.694197 t=418
+zai zhe er 	在這兒	c=0 d=0.099005 t=418
+zai zhe er deng zhe 	在這兒等着	c=1 d=0.995012 t=418
+zen me hui shi 	怎麼回事	c=2 d=1.58567 t=373
+zhan dui 	戰隊	c=1 d=0.618783 t=418
+zhan mu si 	詹姆斯	c=1 d=0.980199 t=418
+zhang 	張	c=2 d=1.0389 t=418
+zhang 	章	c=0 d=0.099005 t=418
+zhang li 	張麗	c=0 d=0.1 t=244
+zhang li fen 	張麗粉	c=1 d=1 t=245
+zhang yong 	張永	c=0 d=0.0748264 t=418
+zhang yong jie 	張永傑	c=1 d=0.752014 t=418
+zhe ge 	這個	c=1 d=1 t=291
+zhe yang 	這樣	c=0 d=0.120832 t=418
+zhen bu cuo 	真不錯	c=1 d=1 t=255
+zhen de ma 	真的嗎	c=1 d=1 t=416
+zhen zhu bai 	珍珠白	c=1 d=1 t=369
+zheng 	鄭	c=1 d=1 t=239
+zheng zai 	正在	c=1 d=1 t=342
+zhi 	只	c=1 d=0.71177 t=418
+zhi ba 	只把	c=1 d=1 t=301
+zhi hou 	之後	c=1 d=0.847894 t=418
+zhi neng shi 	只能是	c=1 d=1 t=292
+zhi shi 	只是	c=1 d=1 t=326
+zhi shi zai 	只是在	c=1 d=0.985112 t=418
+zhi you 	只有	c=2 d=1.78294 t=418
+zhong duan 	終端	c=1 d=0.537944 t=418
+zhuang shi 	裝飾	c=0 d=0.0644036 t=418
+zhuo mian 	桌面	c=1 d=1 t=261
+zi dai 	自帶	c=0 d=0.0869358 t=418
+zi dai jian pan 	自帶鍵盤	c=1 d=0.873716 t=418
+zi ding yi 	自定義	c=2 d=1.69715 t=418
+zi dong 	自動	c=1 d=1 t=270
+zi jian 	自建	c=1 d=0.765915 t=418
+zi jian ci ku 	自建詞庫	c=1 d=1 t=418
+zi ku 	字库	c=2 d=1.68809 t=418
+zi ti 	字体	c=1 d=0.951229 t=418
+zu jian 	组件	c=1 d=0.644236 t=418
+zui da de 	最大的	c=1 d=1 t=374

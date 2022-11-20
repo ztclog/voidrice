@@ -1,0 +1,36 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+external-controller: '0.0.0.0:9091'
+external-ui: '/usr/share/clash-dashboard-git/'
+secret: ''
+routing-mark: 6666 # fwmark on Linux only
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip # redir-host
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 202.99.160.68
+    - 223.5.5.5
+  nameserver:
+    - 202.99.160.68
+    - 223.5.5.5
+  fallback:
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - 114.114.114.114
+    - 8.8.8.8
+    - 101.6.6.6:5353
+
+tun:
+  enable: true
+  # ipv6: true
+  stack: system # gvisor
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-detect-interface: true

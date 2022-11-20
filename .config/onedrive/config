@@ -1,0 +1,4 @@
+# Directory where the files will be synced
+sync_dir = "/home/ztclog/OneDrive"
+# Skip files and directories that match this pattern
+skip_dir = ".*|ArrowBackup|图片|应用|文档|个人保管库|LinuxConfig/etc/lightdm|LinuxConfig/dotconfig/mpv/watch_later|LinuxConfig/dotconfig/transmission-daemon/resume|LinuxConfig/dotconfig/transmission-daemon/torrents|LinuxConfig/boot/loader"

@@ -1,0 +1,6 @@
+#!/bin/sh
+while true; do
+	notify-send "Random Wallpaper chosen." "Auto change wp in 10 minutes."
+	feh --bg-fill --no-fehbg -rz "${XDG_DATA_HOME:-$HOME/.local/share}/wp/" &
+ 	sleep 600
+done

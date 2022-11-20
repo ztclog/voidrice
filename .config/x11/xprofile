@@ -1,0 +1,23 @@
+#!/bin/sh
+# [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# autostart="aria2c dunst icc pasystray picom setbg autostart_wait"
+autostart="aria2c"
+for program in $autostart; do
+	pidof -s "$program" || "$program" &
+done >/dev/null 2>&1
+
+# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
+
+# while true; do
+#    xsetroot -name "$( date +"%R" )"
+#    sleep 1m    # Update time every minute
+# done &
+
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+# [ -n "$xrdbpid" ] && wait "$xrdbpid"
+
+# [ -f "$HOME/.xsession-errors" ] && mv "$HOME/.xsession-errors" "$HOME/.cache/xsession-errors" &
