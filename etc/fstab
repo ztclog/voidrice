@@ -1,0 +1,16 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+
+# /dev/nvme0n1p2
+UUID=ff441970-bafd-40e2-b9fb-54f103981c0a	/         	btrfs     	rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvolid=5,subvol=/	0 1
+
+# /dev/nvme0n1p1 LABEL=EFILABEL
+UUID=4FEB-9801      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p3 LABEL=E
+UUID=31694e1a-204c-4577-bf24-7c6da1db5ac9	/windows/E	btrfs     	rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvolid=5,subvol=/	0 2
+
+# /dev/sda5 LABEL=D
+UUID=1070-44F6      	/windows/D	exfat     	rw,relatime,gid=1000,uid=1000,fmask=0022,dmask=0022,iocharset=utf8,errors=remount-ro	0 2

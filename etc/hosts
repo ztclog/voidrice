@@ -1,0 +1,11 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	PG0
+
+172.64.161.41			tracker-public.tjupt.org
+# 2606:4700:3035::681f:4f86	tracker-public.tjupt.org
+2606:4700:3035::681f:4e86	www.tjupt.org
+172.64.167.137			www.tjupt.org
+172.64.161.41			www.tjupt.org
