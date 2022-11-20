@@ -1,7 +1,7 @@
 # The Voidrice
 
 These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
-[my YouTube channel](https://youtube.com/c/lukesmithxyz).
+[Luke's YouTube channel](https://youtube.com/c/lukesmithxyz).
 
 - Very useful scripts are in `~/.local/bin/`
 - Settings for:
@@ -14,10 +14,7 @@ These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
 	- other stuff like xdg default programs, inputrc and more, etc.
 - I try to minimize what's directly in `~` so:
 	- All configs that can be in `~/.config/` are.
-	- Some environmental variables have been set in `~/.zprofile` to move configs into `~/.config/`
-- Bookmarks in text files used by various scripts (like `~/.local/bin/shortcuts`)
-	- File bookmarks in `~/.config/shell/bm-files`
-	- Directory bookmarks in `~/.config/shell/bm-dirs`
+	- Some environmental variables moved into `~/.config/`
 
 ## Usage
 
