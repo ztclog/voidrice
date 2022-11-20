@@ -39,4 +39,4 @@ or clone the repo files directly to your home directory and install the
 
 ## Default Desktop Artwork
 
-© Kevin Frank, Switzerland, Shortlist, Open competition, Landscape, 2021 Sony World Photography Awards ([link](https://www.worldphoto.org/sites/default/files/gallery/images/2339943/cabc7392a8bc684f5719cb57b406021e.043.jpg))
+© Kevin Frank, Switzerland, Shortlist, Open competition, Landscape, 2021 Sony World Photography Awards ([link](https://www.worldphoto.org/sony-world-photography-awards/winners-galleries/2021/open/shortlisted/landscape-2021-open#&gid=1&pid=12))
