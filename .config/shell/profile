@@ -30,7 +30,7 @@ export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 
-# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # Other program settings:
 export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
