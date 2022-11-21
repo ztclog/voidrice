@@ -21,6 +21,7 @@ alias \
 	l="ls -al" \
 	la="ls -a" \
 	ll="ls -al" \
+	lg="lazygit" \
 	ra="ranger" \
 	rac="ranger-cd" \
 	nl="neofetch | lolcat" 
