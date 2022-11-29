@@ -13,7 +13,7 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls -hN --color=auto --group-directories-first"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -31,4 +31,5 @@ alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
+	# mpv="mpv --ytdl-raw-options=cookies-from-browser=chrome" \
 	mkd="mkdir -pv"
