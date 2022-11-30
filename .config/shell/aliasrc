@@ -31,5 +31,5 @@ alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	mkd="mkdir -pv"
+	mkd="mkdir -pv" \
 	# mpv="mpv --ytdl-raw-options=cookies-from-browser=chrome" \
