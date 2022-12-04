@@ -1,0 +1,10 @@
+[Unit]
+Description=Run dotice every 10 seconds
+
+[Timer]
+OnCalendar=*-*-* *:*:05,15,25,35,45,55
+Persistent=true
+AccuracySec=1us
+
+[Install]
+WantedBy=timers.target

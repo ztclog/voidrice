@@ -1,0 +1,6 @@
+[Unit]
+Description=Run dotice service
+
+[Service]
+Type=oneshot
+ExecStart=/home/ztclog/.config/systemd/user/dotice

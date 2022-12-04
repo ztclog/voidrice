@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+notify-send "`LANG=zh_CN.UTF-8 date`"
