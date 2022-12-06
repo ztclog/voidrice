@@ -6,7 +6,7 @@
 
 # variables
 output="$(date '+%y%m%d-%H%M-%S').png"
-xclip_cmd="xclip -sel clip -t image/png"
+xclip_cmd="xclip -selection clipboard -t image/png"
 
 case "$(printf "a selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)\\na selected area\\ncurrent window\\nfull screen" | dmenu -l 6 -i -p "Screenshot which area?")" in
     "a selected area") maim -s pic-selected-"${output}" ;;
