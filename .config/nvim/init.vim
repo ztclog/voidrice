@@ -16,9 +16,7 @@ Plug 'preservim/tagbar'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+Plugin 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " Some basics:
