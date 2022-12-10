@@ -16,7 +16,6 @@ Plug 'preservim/tagbar'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plugin 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " Some basics:
