@@ -1,3 +1,6 @@
 [user]
 	name = ztclog
 	email = cece140607@163.com
+	; signingkey = 
+[commit]
+	gpgsign = true
