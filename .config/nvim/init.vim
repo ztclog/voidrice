@@ -148,6 +148,9 @@ let g:mkdp_filetypes = ['markdown']
 " By default the theme is define according to the preferences of the system
 let g:mkdp_theme = 'light'
 
+" Replace all is aliased to S.
+	nnoremap S :%s//g<Left><Left>
+
 " Function for toggling the bottom statusbar:
 let s:hidden_all = 0
 function! ToggleHiddenAll()
