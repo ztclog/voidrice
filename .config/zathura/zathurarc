@@ -6,6 +6,20 @@ set adjust-open best-fit
 set selection-clipboard clipboard
 set page-padding 1
 
+map d scroll half-down
+map D toggle_page_mode
 map f toggle_fullscreen
+map i feedkeys ":info"
+map I recolor
+map u scroll half-up
+map p exec "notify-send $PAGE"
+
+map [fullscreen] d scroll half-down
+map [fullscreen] D toggle_page_mode
 map [fullscreen] f toggle_fullscreen
+map [fullscreen] i feedkeys ":info"
+map [fullscreen] I recolor
+map [fullscreen] u scroll half-up
+map [fullscreen] p exec "notify-send $PAGE"
+
 map <C-p> print
