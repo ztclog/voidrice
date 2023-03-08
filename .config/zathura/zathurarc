@@ -1,4 +1,16 @@
-set page-padding 1
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set selection-clipboard clipboard
+set page-padding 1
+
+map [normal] d scroll half-down
+map [normal] D toggle_page_mode
+map [normal] f toggle_fullscreen
+map [normal] u scroll half-up
+
+map [fullscreen] d scroll half-down
+map [fullscreen] D toggle_page_mode
+map [fullscreen] f toggle_fullscreen
+map [fullscreen] u scroll half-up
+
+map <C-p> print
