@@ -1,3 +1,5 @@
+set adjust-open width
+set font "Monospace semi 12"
 set guioptions ""
 set page-padding 1
 set sandbox none
@@ -16,6 +18,7 @@ map <C-r> reload
 map u scroll half-up
 map z adjust_window width
 map Z adjust_window best-fit
+map = zoom in
 
 map [fullscreen] d scroll half-down
 map [fullscreen] D toggle_page_mode
@@ -27,5 +30,6 @@ map [fullscreen] <C-r> reload
 map [fullscreen] u scroll half-up
 map [fullscreen] z adjust_window width
 map [fullscreen] Z adjust_window best-fit
+map [fullscreen] = zoom in
 
 map <C-p> print
