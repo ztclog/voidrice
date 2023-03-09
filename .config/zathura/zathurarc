@@ -1,25 +1,31 @@
+set guioptions ""
+set page-padding 1
 set sandbox none
 set statusbar-h-padding 0
 set statusbar-v-padding 0
-set window-title-page true
-set adjust-open best-fit
 set selection-clipboard clipboard
-set page-padding 1
+set window-title-page true
 
 map d scroll half-down
 map D toggle_page_mode
 map f toggle_fullscreen
-map i feedkeys ":info"
+map i toggle_statusbar
 map I recolor
+map p exec "notify-send 'Current Page is $PAGE'"
+map <C-r> reload
 map u scroll half-up
-map p exec "notify-send $PAGE"
+map z adjust_window width
+map Z adjust_window best-fit
 
 map [fullscreen] d scroll half-down
 map [fullscreen] D toggle_page_mode
 map [fullscreen] f toggle_fullscreen
-map [fullscreen] i feedkeys ":info"
+map [fullscreen] i toggle_statusbar
 map [fullscreen] I recolor
+map [fullscreen] p exec "notify-send 'Current Page is $PAGE'"
+map [fullscreen] <C-r> reload
 map [fullscreen] u scroll half-up
-map [fullscreen] p exec "notify-send $PAGE"
+map [fullscreen] z adjust_window width
+map [fullscreen] Z adjust_window best-fit
 
 map <C-p> print
