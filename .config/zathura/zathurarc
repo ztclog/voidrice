@@ -1,5 +1,5 @@
 set adjust-open width
-set font "Monospace semi 12"
+set font "monospace semi 12"
 set guioptions ""
 set page-padding 1
 set sandbox none
