@@ -32,10 +32,10 @@
       "shortcut": "F1",
       "refresh": "<Control>r",
       "search": "<ctl>F",
-      "quit": "<ctl>Q",
-      "all_articles": "<ctl>1",
-      "only_unread": "<ctl>2",
-      "only_starred": "<ctl>3"
+      "quit": "q",
+      "all_articles": "1",
+      "only_unread": "2",
+      "only_starred": "3"
     },
     "article_view": {
       "scroll_up": "k",
