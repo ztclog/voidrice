@@ -3,14 +3,17 @@ set font "monospace semi 12"
 set guioptions ""
 set page-padding 1
 set sandbox none
+set statusbar-home-tilde true
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set selection-clipboard clipboard
+set vertical-center true
 set window-title-page true
 
 map d scroll half-down
 map D toggle_page_mode
 map f toggle_fullscreen
+map F follow
 map i toggle_statusbar
 map I recolor
 map p exec "notify-send 'Current Page is $PAGE'"
@@ -23,6 +26,7 @@ map = zoom in
 map [fullscreen] d scroll half-down
 map [fullscreen] D toggle_page_mode
 map [fullscreen] f toggle_fullscreen
+map [fullscreen] F follow
 map [fullscreen] i toggle_statusbar
 map [fullscreen] I recolor
 map [fullscreen] p exec "notify-send 'Current Page is $PAGE'"
