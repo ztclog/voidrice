@@ -1,0 +1,39 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 18, // Waybar height (to be removed for auto height)
+    //"width": 10, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    "mode": "hide",
+    "modules-right": ["pulseaudio", "tray", "clock"],
+    "tray": {
+        "icon-size": 18,
+        "spacing": 0
+    },
+    "clock": {
+        "timezone": "Asia/Shanghai",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+	// "rotate": 90
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+	// "rotate": 90,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}
