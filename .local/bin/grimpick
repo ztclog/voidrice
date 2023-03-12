@@ -1,0 +1,10 @@
+#!/bin/sh
+output="$(date '+%y%m%d-%H%M-%S').png"
+clip_cmd="wl-copy --type image/png"
+
+case "$(printf "a selected area (copy)\\nfull screen (copy)\\na selected area\\nfull screen" | dmenu -l 6 -i -p "Screenshot which area?")" in
+	"a selected area") slurp | grim -l 0 -g -o pic-selected-"${output}" ;;
+	"full screen") grim -l 0 pic-full-"${output}" ;;
+	"a selected area (copy)") slurp | grim -l 0 -g - - | ${clip_cmd} ;;
+	"full screen (copy)") grim -l 0 - | ${clip_cmd} ;;
+esac
