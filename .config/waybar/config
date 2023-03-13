@@ -1,8 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
-    //"width": 10, // Waybar width
+    // "height": 20, // Waybar height (to be removed for auto height)
+    // "width": 100, // Waybar width
     "spacing": 1, // Gaps between modules (4px)
     "mode": "hide",
     "modules-right": ["pulseaudio", "tray", "clock"],
@@ -34,6 +34,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "iwgtk"
     },
 }
