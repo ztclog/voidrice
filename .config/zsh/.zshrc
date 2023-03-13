@@ -16,6 +16,8 @@ SAVEHIST=10000000
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS #消除历史记录中的重复条目
 
+bindkey '^[[Z' reverse-menu-complete # shift table 回选
+
 bindkey '^[[A' up-line-or-search  # 查找历史记录 只显示以当前命令开头的历史记录
 bindkey '^[[B' down-line-or-search  # 查找历史记录 只显示以当前命令开头的历史记录
 
