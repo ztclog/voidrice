@@ -21,9 +21,6 @@ bindkey '^[[Z' reverse-menu-complete # shift table 回选
 bindkey '^[[A' up-line-or-search  # 查找历史记录 只显示以当前命令开头的历史记录
 bindkey '^[[B' down-line-or-search  # 查找历史记录 只显示以当前命令开头的历史记录
 
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
-
 # vi mode
 bindkey -v
 
