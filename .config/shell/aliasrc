@@ -1,8 +1,6 @@
 #!/bin/sh
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-# Use $XINITRC variable if file exists.
-# [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
 # Verbosity and settings that you pretty much just always are going to want.
 
@@ -13,7 +11,7 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first"
+	ls="ls -hN --color=auto --group-directories-first" \
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -22,14 +20,12 @@ alias \
 	la="ls -a" \
 	ll="ls -al" \
 	lg="lazygit" \
-	ra="ranger" \
-	rac="ranger-cd" \
-	nl="neofetch | lolcat" 
+	nl="neofetch | lolcat" \
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	mkd="mkdir -pv" \
+	mkd="mkdir -pv"
 	# mpv="mpv --ytdl-raw-options=cookies-from-browser=chrome" \
