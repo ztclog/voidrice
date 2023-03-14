@@ -55,17 +55,17 @@ scroll-and-clear-screen() {
 } && zle -N scroll-and-clear-screen
 bindkey '^l' scroll-and-clear-screen
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp -uq)"
-    trap 'rm -f $tmp >/dev/null 2>&1 && trap - HUP INT QUIT TERM PWR EXIT' HUP INT QUIT TERM PWR EXIT
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+# ranger 目录同步
+$TERMCMD && $RANGERCD && unset RANGERCD  # && ranger-cd
+ranger-cd() {
+    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
+    ranger --choosedir="$temp_file" -- "${@:-$PWD}"
+    if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
+        cd -- "$chosen_dir"
     fi
-} && zle -N lfcd
-bindkey '^o' lfcd
+    rm -f -- "$temp_file"
+}
+bindkey -s '^o' '^uranger-cd\n'
 
 # 仿 Fish 命令高亮
 # inspired by https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
