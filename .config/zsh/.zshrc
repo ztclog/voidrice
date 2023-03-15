@@ -76,8 +76,8 @@ lfcd () {
         dir="$(cat "$tmp")"
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
-} && zle -N lfcd
-bindkey '^o' lfcd
+}
+bindkey -s '^o' '^ulfcd\n'
 
 # 仿 Fish 命令高亮
 # inspired by https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
