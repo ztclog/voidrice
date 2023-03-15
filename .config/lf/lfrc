@@ -1,8 +1,19 @@
 set noicons
 
+map D delete
 map J half-down
 map K half-up
-map D delete
+map <enter> shell
+map <c-n> push $nvim<space>		# intend to creat a new file and edit it
+map <a-n> push $mkdir<space>-p<space>	# intend to creat a new folder
 
-map ge cd /windows/E/Downloads
+cmap <tab> cmd-menu-complete
+cmap <backtab> cmd-menu-complete-back
+
 map g/ cd /
+map ge cd ~/windows/E/Downloads
+map gd cd ~/windows/D
+
+map c					# delete exsiting bindings
+map cfg cd ~/.config
+map clo cd ~/.local/share
