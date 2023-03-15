@@ -1,4 +1,8 @@
-map <c-r> reload
-map <enter> shell
-map o &mimeopen "$f"
-map O $mimeopen --ask "$f"
+set noicons
+
+map J half-down
+map K half-up
+map D delete
+
+map ge cd /windows/E/Downloads
+map g/ cd /
