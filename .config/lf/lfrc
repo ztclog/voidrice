@@ -1,0 +1,4 @@
+map <c-r> reload
+map <enter> shell
+map o &mimeopen "$f"
+map O $mimeopen --ask "$f"
