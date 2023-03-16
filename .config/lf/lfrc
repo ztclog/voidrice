@@ -6,14 +6,19 @@ map K half-up
 map <enter> shell
 map <c-n> push $nvim<space>		# intend to creat a new file and edit it
 map <a-n> push $mkdir<space>-p<space>	# intend to creat a new folder
+map p					# unbind p "paste"
+map pp	paste
+map pl	push $ln<space>-si<space>$fx<space>.<enter>
+map pL	push $ln<space>-sir<space>$fx<space>.<enter>
 
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
 
-map g/ cd /
-map ge cd ~/windows/E/Downloads
-map gd cd ~/windows/D
-
-map c					# delete exsiting bindings
+map c					# unbind c "clear"
+map u	clear				# remap u from "unselect" to "clear"
+map U	unselect
 map cfg cd ~/.config
 map clo cd ~/.local/share
+map g/	cd /
+map ge	cd ~/windows/E/Downloads
+map gd	cd ~/windows/D
