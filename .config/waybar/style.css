@@ -1,14 +1,18 @@
 * {
 	font-family: Sans-serif;
-	font-size: 13px;
+	font-size: 12px;
 	background-color: rgba(0,0,0,0);
 }
 
 #clock {
 	font-weight: 700;
-	padding: 0 3px;
+	padding: 5px 0;
 	color: #FFF;
 	background-color: rgba(0,0,0,0.2);
+}
+
+#tray menu {
+	background-color: rgba(100,246,228,0.4);
 }
 
 #pulseaudio {
