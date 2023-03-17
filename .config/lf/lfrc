@@ -1,6 +1,7 @@
 set noicons
 
 map D delete
+map E $nvim $f
 map J half-down
 map K half-up
 map <enter> shell
@@ -20,5 +21,5 @@ map U	unselect
 map cfg cd ~/.config
 map clo cd ~/.local/share
 map g/	cd /
-map ge	cd ~/windows/E/Downloads
 map gd	cd ~/windows/D
+map ge	cd ~/windows/E/Downloads
