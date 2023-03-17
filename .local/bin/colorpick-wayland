@@ -1,0 +1,21 @@
+#!/usr/bin/zsh
+
+HEX() {
+	slurp -p | grim -t png -l 0 -g - - | identify -verbose - - | awk '/1:/ {print $3}' > /tmp/color
+	MOD="HEX"
+}
+RGB() {
+	slurp -p | grim -t png -l 0 -g - - | identify -verbose - - | awk '/1:/ {print $4}' > /tmp/color
+	MOD="RGB"
+}
+ns(){
+	notify-send "$MOD in your clipboard." "Key is `cat /tmp/color`"
+	cat /tmp/color | wl-copy
+	rm -f /tmp/color
+}
+
+case "$(printf "HEX\\nRGB" | dmenu -l 2 -i -p "which format?")" in
+	"HEX") HEX && ns ;;
+	"RGB") RGB && ns ;;
+esac
+
