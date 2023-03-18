@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/sh
 
 HEX() {
 	CV=$(slurp -p | grim -t png -l 0 -g - - | identify -verbose - - | awk '/1:/ {print $3}') && wl-copy $CV
