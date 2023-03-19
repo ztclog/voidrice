@@ -10,7 +10,8 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="google-chrome-stable"
+# export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -35,7 +36,12 @@ export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 # Other program settings:
 export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
-export MOZ_ENABLE_WAYLAND="1"		# Firefox support Wayland
+
+# Native wayland
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+	export MOZ_ENABLE_WAYLAND="1"		# Firefox support Wayland
+	export QT_QPA_PLATFORM="wayland"	# Qt on wayland
+fi
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
