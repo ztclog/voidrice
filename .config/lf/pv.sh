@@ -37,7 +37,13 @@ if [ -n "$FIFO_UEBERZUG" ]; then
 			ffmpegthumbnailer -i "$file" -o "$cache" -s 0
 			draw "$cache" "$@"
 			;;
-		text/*) highlight -O ansi "$file";;
+		*/pdf)
+			cache="$(hash "$file").jpg"
+			cache "$cache" "$@"
+			[ ! -f "$cache.jpg" ] && pdftoppm -jpeg -f 1 -singlefile -- "$file" "${cache%.*}"
+			draw "$cache" "$@"
+			;;
+		text/*) highlight -O ansi "$file" || less "$file";;
 		*)      mediainfo "$file";;
 	esac
 fi
