@@ -1,0 +1,206 @@
+# default values from lf (with matching order)
+# ln      l       # LINK
+# or      l       # ORPHAN
+# tw      t       # STICKY_OTHER_WRITABLE
+# ow      d       # OTHER_WRITABLE
+# st      t       # STICKY
+# di      d       # DIR
+# pi      p       # FIFO
+# so      s       # SOCK
+# bd      b       # BLK
+# cd      c       # CHR
+# su      u       # SETUID
+# sg      g       # SETGID
+# ex      x       # EXEC
+# fi      -       # FILE
+# fi	"📃"
+fi      "--"      # FILE
+
+di	"📁"
+tw	"🗂️ "
+ow	"📂"
+ln	"📎"
+or	"❗"
+ex	"⚙️ "
+
+*.bin	"⚙️ "
+*.exe	"⚙️ "
+
+*config	"📄"
+*.conf	"📄"
+*.txt	"📄"
+*.ini	"📄"
+*.log	"📄"
+*.rc	"📄"
+*.rules	"📄"
+*.json	"📄"
+*.example "📄"
+
+*.tex	"📜"
+*.md	"📝"
+*README	"📝"
+*.r	"📉"
+*.R	"📉"
+*.rmd	"📉"
+*.Rmd	"📉"
+*.nfo	"ℹ "
+*.info	"ℹ "
+*.md5	"🔐"
+*.crt	"🔐"
+
+
+*.urls	"🌐"
+*.html	"🌐"
+*.xml	"🌐"
+*.css	"🎨"
+
+*.pdf	"🇵 "
+*.djvu	"📖"
+*.epub	"📖"
+*.azw3	"📖"
+*.mobi	"📖"
+
+*.zim	"📓"
+
+*.csv	"📊"
+*.xls	"📊"
+*.xlsx	"📊"
+
+*.iso	"📀"
+*.img   "📀"
+
+*.part  "🧩"
+
+*.jar   "♨️ "
+*.java	"♨️ "
+
+*.torrent "🔽"
+
+# archives or compressed (extensions from dircolors defaults)
+*.tar   "📥"
+*.tgz   "📥"
+*.arc   "📥"
+*.arj   "📥"
+*.taz   "📥"
+*.lha   "📥"
+*.lz4   "📥"
+*.lzh   "📥"
+*.lzma  "📥"
+*.tlz   "📥"
+*.txz   "📥"
+*.tzo   "📥"
+*.t7z   "📥"
+*.zip   "📥"
+*.z     "📥"
+*.dz    "📥"
+*.gz    "📥"
+*.lrz   "📥"
+*.lz    "📥"
+*.lzo   "📥"
+*.xz    "📥"
+*.zst   "📥"
+*.tzst  "📥"
+*.bz2   "📥"
+*.bz    "📥"
+*.tbz   "📥"
+*.tbz2  "📥"
+*.tz    "📥"
+*.deb   "📥"
+*.rpm   "📥"
+*.jar   "📥"
+*.war   "📥"
+*.ear   "📥"
+*.sar   "📥"
+*.rar   "📥"
+*.alz   "📥"
+*.ace   "📥"
+*.zoo   "📥"
+*.cpio  "📥"
+*.7z    "📥"
+*.rz    "📥"
+*.cab   "📥"
+*.wim   "📥"
+*.swm   "📥"
+*.dwm   "📥"
+*.esd   "📥"
+
+# image formats (extensions from dircolors defaults)
+*.jpg   "🌁"
+*.jpeg  "🌁"
+*.mjpg  "🌁"
+*.mjpeg "🌁"
+*.gif   "🌁"
+*.bmp   "🌁"
+*.pbm   "🌁"
+*.pgm   "🌁"
+*.ppm   "🌁"
+*.tga   "🌁"
+*.xbm   "🌁"
+*.xpm   "🌁"
+*.tif   "🌁"
+*.tiff  "🌁"
+*.png   "🌁"
+*.svg   "🌁"
+*.svgz  "🌁"
+*.mng   "🌁"
+*.pcx   "🌁"
+*.mov   "🌁"
+*.mpg   "🌁"
+*.mpeg  "🌁"
+*.m2v   "🌁"
+*.mkv   "🌁"
+*.webm  "🌁"
+*.ogm   "🌁"
+*.mp4   "🌁"
+*.m4v   "🌁"
+*.mp4v  "🌁"
+*.vob   "🌁"
+*.qt    "🌁"
+*.nuv   "🌁"
+*.wmv   "🌁"
+*.asf   "🌁"
+*.rm    "🌁"
+*.rmvb  "🌁"
+*.flc   "🌁"
+*.avi   "🌁"
+*.fli   "🌁"
+*.flv   "🌁"
+*.gl    "🌁"
+*.dl    "🌁"
+*.xcf   "🌁"
+*.xwd   "🌁"
+*.yuv   "🌁"
+*.cgm   "🌁"
+*.emf   "🌁"
+*.ogv   "🌁"
+*.ogx   "🌁"
+
+# audio formats (extensions from dircolors defaults)
+*.aac   "🎵"
+*.au    "🎵"
+*.flac  "🎵"
+*.m4a   "🎵"
+*.mid   "🎵"
+*.midi  "🎵"
+*.mka   "🎵"
+*.mp3   "🎵"
+*.mpc   "🎵"
+*.ogg   "🎵"
+*.ra    "🎵"
+*.wav   "🎵"
+*.oga   "🎵"
+*.opus  "🎵"
+*.spx   "🎵"
+*.xspf  "🎵"
+
+# video formats
+*.mkv	"🎬"
+*.mp4	"🎬"
+*.webm	"🎬"
+*.mpeg	"🎬"
+*.avi	"🎬"
+*.mov	"🎬"
+*.mpg	"🎬"
+*.wmv	"🎬"
+*.m4b	"🎬"
+*.flv	"🎬"
