@@ -39,7 +39,7 @@ export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 
 export WINEARCH="win32"
-export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wine"
+export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefix"
 
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
