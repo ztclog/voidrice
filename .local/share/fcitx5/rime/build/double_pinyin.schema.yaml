@@ -1,15 +1,15 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.10.0
   timestamps:
-    default: 1654509031
-    default.custom: 1655774688
-    double_pinyin.custom: 1655774648
-    double_pinyin.schema: 1584212952
-    fuhao: 1655774686
+    default: 1654509030
+    default.custom: 1655774687
+    double_pinyin.custom: 1655774647
+    double_pinyin.schema: 1584212951
+    fuhao: 1655774685
     fuhao.custom: 0
-    key_bindings: 1654509031
+    key_bindings: 1654509030
     key_bindings.custom: 0
-    punctuation: 1654509031
+    punctuation: 1654509030
     punctuation.custom: 0
 engine:
   filters:
