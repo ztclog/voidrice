@@ -38,9 +38,8 @@ lfcd () {
 		dir="$(cat "$tmp")"
 		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
 	fi
-} && zle -N lfcd
-# bindkey -s '^o' 'lfcd\n'
-bindkey '^o' lfcd
+}
+bindkey -s '^o' '^ulfcd\n'
 
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
