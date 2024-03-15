@@ -20,6 +20,12 @@ shift
 
 if [ -n "$FIFO_UEBERZUG" ]; then
 	case "$(file -Lb --mime-type -- "$file")" in
+		image/svg | image/svg+xml)
+			cache="$(hash "$file").jpg"
+			cache "$cache" "$@"
+			convert -- "$file" -auto-orient "$cache"
+			draw "$file" "$@"
+			;;
 		image/*)
 			orientation="$(identify -format '%[EXIF:Orientation]\n' -- "$file")"
 			if [ -n "$orientation" ] && [ "$orientation" != 1 ]; then
@@ -43,6 +49,7 @@ if [ -n "$FIFO_UEBERZUG" ]; then
 			[ ! -f "$cache.jpg" ] && pdftoppm -jpeg -f 1 -singlefile -- "$file" "${cache%.*}"
 			draw "$cache" "$@"
 			;;
+		application/*zip | application/x-7z-compressed | application/x-rar) 7z l "$file" ;;
 		text/*) highlight -O ansi "$file" || less "$file";;
 		*)      mediainfo "$file";;
 	esac
