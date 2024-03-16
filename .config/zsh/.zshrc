@@ -1,10 +1,15 @@
 autoload -U colors compinit && colors && compinit
 prompt=%B%F{green}%1~' '%f%b  # 设置默认命令行提示符样式
-compinit
 
-bindkey '^[[P' vi-backward-delete-char # delete
-bindkey -M vicmd '^[[P' vi-backward-delete-char
+bindkey '^[[P' delete-char # delete
+bindkey -M vicmd '^[[P' delete-char
+bindkey '^?' backward-delete-char
 bindkey '^[[Z' reverse-menu-complete # shift+tab
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # Options are primarily referred to by name. These names are case insensitive and underscores are ignored. 
 # For example, `allexport' is equivalent to `A__lleXP_ort'.
@@ -29,7 +34,8 @@ scroll-and-clear-screen() {
 } && zle -N scroll-and-clear-screen
 bindkey '^l' scroll-and-clear-screen
 
-[[ -f $XDG_CONFIG_HOME/lf/lfcd.zsh ]] && . $XDG_CONFIG_HOME/lf/lfcd.zsh
+[[ -f $XDG_CONFIG_HOME/zsh/plugins/lfcd.zsh ]] && . $XDG_CONFIG_HOME/zsh/plugins/lfcd.zsh
+[[ -f $XDG_CONFIG_HOME/zsh/plugins/vi-mode-cursor.zsh ]] && . $XDG_CONFIG_HOME/zsh/plugins/vi-mode-cursor.zsh
 [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && . /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
