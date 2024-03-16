@@ -7,7 +7,7 @@ These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
 - Settings for:
 	- vim/nvim (text editor)
 	- zsh (shell)
-	- ranger (file manager)
+	- lf/ranger (file manager)
 	- mpd/ncmpcpp (music)
 	- sxiv (image/gif viewer)
 	- mpv (video player)
@@ -25,7 +25,7 @@ These dotfiles are intended to go with numerous suckless programs I use:
 
 ## Install these dotfiles and all dependencies
 
-Use [LARBS](https://larbs.xyz) to autoinstall everything:
+Use [LARBS](https://github.com/ztclog/LARBS) to autoinstall everything:
 
 ```
 curl -LO https://raw.githubusercontent.com/ztclog/LARBS/master/larbs.sh
