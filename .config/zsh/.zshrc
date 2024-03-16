@@ -10,13 +10,13 @@ bindkey '^[[Z' reverse-menu-complete # shift+tab
 # For example, `allexport' is equivalent to `A__lleXP_ort'.
 # --------------------------------------------------------------------------------------------------------
 setopt	NO_AUTO_CD
+setopt	MENU_COMPLETE
 setopt	COMPLETE_ALIASES
 setopt	COMPLETE_IN_WORD
-setopt	INTERACTIVE_COMMENTS
-setopt	HIST_FIND_NO_DUPS
-setopt	HIST_IGNORE_ALL_DUPS
+setopt	HIST_SAVE_NO_DUPS
 setopt	HIST_IGNORE_SPACE
-setopt	MENU_COMPLETE
+setopt	HIST_IGNORE_ALL_DUPS
+setopt	INTERACTIVE_COMMENTS
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -29,19 +29,8 @@ scroll-and-clear-screen() {
 } && zle -N scroll-and-clear-screen
 bindkey '^l' scroll-and-clear-screen
 
-if [[ -f $XDG_CONFIG_HOME/lf/lfcd.zsh ]]; then
-  . $XDG_CONFIG_HOME/lf/lfcd.zsh
-fi
-if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
-if [[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
-  . /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-fi
-# pkgfile "command not found" handler
-if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
-  . /usr/share/doc/pkgfile/command-not-found.zsh
-fi
+[[ -f $XDG_CONFIG_HOME/lf/lfcd.zsh ]] && . $XDG_CONFIG_HOME/lf/lfcd.zsh
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && . /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+[[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]] && . /usr/share/doc/pkgfile/command-not-found.zsh	# pkgfile "command not found" handler
