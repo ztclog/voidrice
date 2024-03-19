@@ -15,6 +15,7 @@ export BROWSER="firefox"
 
 # Color output
 export PAGER="less"
+export LESS="R"
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 export GROFF_NO_SGR=1	# color man page
 
