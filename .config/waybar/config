@@ -1,11 +1,11 @@
 {
 	"layer": "top", // Waybar at top layer
-		"position": "top", // Waybar position (top|bottom|left|right)
-		"height": 50, // Waybar height (to be removed for auto height)
-				   // "width": 100, // Waybar width
+		"position": "right", // Waybar position (top|bottom|left|right)
+	     	"height": 50, // Waybar height (to be removed for auto height)
+				     // "width": 100, // Waybar width
 		"spacing": 1, // Gaps between modules (4px)
 		"mode": "hide",
-		"modules-right": ["pulseaudio", "tray", "clock"],
+		"modules-right": ["pulseaudio", "battery", "tray", "clock"],
 		"tray": {
 			"icon-size": 18,
 			"spacing": 0
@@ -14,13 +14,18 @@
 			"timezone": "Asia/Shanghai",
 			"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 			"format-alt": "{:%Y-%m-%d}",
-			// "rotate": 90
+			"rotate": 270
+		},
+		"battery": {
+			"format": "🔋{capacity}",
+			"format-alt": "{time}",
+			"rotate": 270
 		},
 		"pulseaudio": {
 			// "scroll-step": 1, // %, can be a float
-			// "rotate": 90,
+			"rotate": 270,
 			"format": "{volume}% {icon} {format_source}",
-			"format-bluetooth": "{volume}% {icon} {format_source}",
+			"format-bluetooth": "{volume}% {icon} {format_source}",
 			"format-bluetooth-muted": " {icon} {format_source}",
 			"format-muted": "🔇 {format_source}",
 			"format-source": "{volume}% 🎙️",
@@ -28,7 +33,7 @@
 			"format-icons": {
 				"headphone": "🎧",
 				"hands-free": "",
-				"headset": "",
+				"headset": "💙",
 				"phone": "",
 				"portable": "",
 				"car": "",
