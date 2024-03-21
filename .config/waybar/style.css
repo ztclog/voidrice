@@ -11,6 +11,17 @@
 	background-color: rgba(0,0,0,0.2);
 }
 
+#battery {
+	font-weight: 700;
+	padding: 0 0 5px 0;
+	color: #FFF;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#battery.charging,#battery.plugged {
+	color: #26A65B;
+}
+
 #tray menu {
 	background-color: rgba(100,246,228,0.4);
 }
@@ -21,4 +32,8 @@
 
 #pulseaudio.muted {
 	color: #9ec7f0;
+}
+
+#mpris {
+	color: #7777ff;
 }

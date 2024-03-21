@@ -5,7 +5,7 @@
 				     // "width": 100, // Waybar width
 		"spacing": 1, // Gaps between modules (4px)
 		"mode": "hide",
-		"modules-right": ["pulseaudio", "battery", "tray", "clock"],
+		"modules-right": ["mpris", "pulseaudio", "battery", "tray", "clock"],
 		"tray": {
 			"icon-size": 18,
 			"spacing": 0
@@ -14,21 +14,23 @@
 			"timezone": "Asia/Shanghai",
 			"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 			"format-alt": "{:%Y-%m-%d}",
-			"rotate": 270
+			"rotate": 270,
+			"on-click-right": "makoctl restore"
 		},
 		"battery": {
 			"format": "🔋{capacity}",
-			"format-alt": "{time}",
-			"rotate": 270
+			"rotate": 270,
+			"on-scroll-up": "light -A 10",
+			"on-scroll-down": "light -U 10"
 		},
 		"pulseaudio": {
 			// "scroll-step": 1, // %, can be a float
 			"rotate": 270,
-			"format": "{volume}% {icon} {format_source}",
-			"format-bluetooth": "{volume}% {icon} {format_source}",
+			"format": "{icon} {volume}% {format_source}",
+			"format-bluetooth": "{icon} {volume}% {format_source}",
 			"format-bluetooth-muted": " {icon} {format_source}",
-			"format-muted": "🔇 {format_source}",
-			"format-source": "{volume}% 🎙️",
+			"format-muted": "🔇{format_source}",
+			"format-source": "🎙️{volume}%",
 			"format-source-muted": "🤐",
 			"format-icons": {
 				"headphone": "🎧",
@@ -41,4 +43,16 @@
 			},
 			"on-click": "iwgtk"
 		},
+		"mpris": {
+			"rotate": 270,
+			"interval": 1,
+			"format": "{player_icon} <b>{dynamic}</b>",
+			"format-paused": "{status_icon} <i>{dynamic}</i>",
+			"player-icons": {
+				"default": "🎵"
+			},
+			"status-icons": {
+				"paused": "♪"
+			}
+		}
 }
