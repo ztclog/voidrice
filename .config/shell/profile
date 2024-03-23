@@ -24,6 +24,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+export WECHAT_DATA_DIR="$HOME/.local/share/WeChat_Data"
+
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
