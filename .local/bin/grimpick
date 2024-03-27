@@ -2,9 +2,9 @@
 output="$(date '+%y%m%d-%H%M-%S').png"
 clip_cmd="wl-copy --type image/png"
 
-case "$(printf "a selected area (copy)\\nfull screen (copy)\\na selected area\\nfull screen" | dmenu -l 4 -i -p "Screenshot which area?")" in
+case "$(printf "1. a selected area (copy)\\n2. full screen (copy)\\n3. a selected area\\n4. full screen" | dmenu -l 4 -i -p "Screenshot which area?")" in
 	"a selected area") slurp | grim -l 0 -g - pic-selected-"${output}" ;;
 	"full screen") sleep 0.5 && grim -l 0 pic-full-"${output}" ;;
 	"a selected area (copy)") slurp | grim -l 0 -g - - | ${clip_cmd} ;;
-	"full screen (copy)") sleep 0.5 && grim -l 0 - | ${clip_cmd} ;;
+	"full screen (copy)")sleep 0.5 && grim -l 0 - | ${clip_cmd} ;;
 esac
