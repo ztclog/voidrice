@@ -50,7 +50,8 @@ if [ -n "$FIFO_UEBERZUG" ]; then
 			draw "$cache" "$@"
 			;;
 		application/*zip | application/x-7z-compressed | application/x-rar) 7z l "$file" ;;
-		text/*) highlight -O ansi "$file" || less "$file";;
+		text/html) w3m "$file";;
+		text/* | application/javascript | application/json) highlight -O ansi "$file" || less "$file";;
 		*)      mediainfo "$file";;
 	esac
 fi
