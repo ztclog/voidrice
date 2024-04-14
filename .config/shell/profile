@@ -5,7 +5,7 @@
 # Adds `~/.local/bin` to $PATH
 # [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 # export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
-export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
 # Default programs:
 export EDITOR="nvim"
