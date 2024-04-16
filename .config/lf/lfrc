@@ -10,20 +10,44 @@ set sortby 'ext'
 set previewer '~/.config/lf/pv.sh'
 set cleaner '~/.config/lf/clear_img.sh'
 
-map D delete
+map D push %trash<space>-v<space>$fx
+map <c-z>  $trash-restore
 map E $nvim $f
+map <a-e> $sudo nvim $f
 map J half-down
 map K half-up
 
-map r :rename		# before extension
-map R push A<c-u> 	# new rename
+cmd bulkrename ${{
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    echo "$fs" > "$tmpfile_old"
+    echo "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+    done
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
+    lf -remote "send $id unselect"
+}}
+
+map r :rename		        # before extension
+map R push A<c-u> 	    # new rename
+map <a-r> bulkrename	  # bulkrename
 map A :rename; cmd-end 	# at the very end
 map I :rename; cmd-home # at the very beginning
 
 map <enter> shell
-map <c-n> push $nvim<space>		# intend to creat a new file and edit it
+map <c-n> push $nvim<space>		        # intend to creat a new file and edit it
 map <a-n> push $mkdir<space>-p<space>	# intend to creat a new folder
-map p					# unbind p "paste"
+map p					                        # unbind p "paste"
 map pp	paste
 map pl	push $ln<space>-si<space>$fx<space>.<enter>
 map pL	push $ln<space>-sir<space>$fx<space>.<enter>
@@ -31,7 +55,7 @@ map pL	push $ln<space>-sir<space>$fx<space>.<enter>
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
 
-map c					# unbind c "clear"
+map c					    # unbind c "clear"
 map u	clear				# remap u from "unselect" to "clear"
 map U	unselect
 map cfg cd ~/.config
