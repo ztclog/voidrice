@@ -24,5 +24,5 @@ user_pref("security.insecure_password.ui.enabled",	true);
 user_pref("layout.css.visited_links_enabled",		false);
 user_pref("browser.urlbar.autocomplete.enabled",	false);
 user_pref("browser.shell.checkDefaultBrowser",		false);
-user_pref("dom.security.https_only_mode",		true);
+user_pref("dom.security.https_only_mode",		false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets",true);
