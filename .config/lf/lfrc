@@ -11,7 +11,7 @@ set previewer '~/.config/lf/pv.sh'
 set cleaner '~/.config/lf/clear_img.sh'
 
 map <delete> delete
-map D %trash -v $fx
+map D %trash -iv $fx
 map <c-z>  $trash-restore
 
 map E $nvim $f
@@ -55,8 +55,10 @@ map pp	paste
 map pl	%ln -si $fx .
 map pL	%ln -sir $fx .
 
-map =766 %chmod 766 $fx
+map ==   push %chmod<space><space>$fx<c-b><c-b><c-b><c-b>
 map =+x  %chmod +x $fx
+map =-x  %chmod -x $fx
+map =766 %chmod 766 $fx
 
 map zx %7z x -o$f-files $f
 map zz $7z a -mx9 $f.7z $fx
