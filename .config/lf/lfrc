@@ -60,8 +60,9 @@ map =+x  %chmod +x $fx
 map =-x  %chmod -x $fx
 map =766 %chmod 766 $fx
 
+map zc $unzip -O CP936 $f -d $f-files # only for Chinese Charset zips
 map zx %7z x -o$f-files $f
-map zz $7z a -mx9 $f.7z $fx
+map zz $7z a $f.zip $fx # "a -mx9 file.7z" for best compression ratio
 
 map x &$f
 
