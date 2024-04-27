@@ -12,6 +12,7 @@ alias \
 # Colorize commands when possible.
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
+	ip="ip -c"
 
 # These common commands are just too long! Abbreviate them.
 alias \
