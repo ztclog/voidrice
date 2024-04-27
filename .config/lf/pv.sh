@@ -1,4 +1,5 @@
 #!/bin/sh
+
 draw() {
 	~/.config/lf/draw_img.sh "$@"
 	exit 1
@@ -51,7 +52,8 @@ if [ -n "$FIFO_UEBERZUG" ]; then
 			;;
 		application/*zip | application/x-7z-compressed | application/x-rar) 7z l "$file" ;;
 		text/html) w3m "$file";;
-		text/* | application/javascript | application/json) highlight -O ansi "$file" || less "$file";;
+		# text/* | application/javascript | application/json)  less "$file";;
+		text/* | application/javascript | application/json) bat --theme ansi --terminal-width "$(($4-2))" -f "$file" || highlight -O ansi "$file";;
 		*)      mediainfo "$file";;
 	esac
 fi
