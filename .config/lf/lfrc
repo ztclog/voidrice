@@ -11,7 +11,7 @@ set previewer '~/.config/lf/pv.sh'
 set cleaner '~/.config/lf/clear_img.sh'
 
 map <delete> delete
-map D %trash -iv $fx
+map D %trash -v $fx
 map <c-z>  $trash-restore
 
 map E $nvim $f
@@ -60,9 +60,9 @@ map =+x  %chmod +x $fx
 map =-x  %chmod -x $fx
 map =766 %chmod 766 $fx
 
-map zc $unzip -O CP936 $f -d $f-files # only for Chinese Charset zips
-map zx %7z x -o$f-files $f
-map zz $7z a $f.zip $fx # "a -mx9 file.7z" for best compression ratio
+map zc $unzip -O CP936 $f -d ${f%.*} # only for Chinese Charset zips
+map zx %7z x -o${f%.*} $f
+map zz $7z a ${f%.*}.zip $fx # "a -mx9 file.7z" for best compression ratio
 
 map x &$f
 
