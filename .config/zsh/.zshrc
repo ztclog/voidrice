@@ -34,9 +34,9 @@ scroll-and-clear-screen() {
 } && zle -N scroll-and-clear-screen
 bindkey '^l' scroll-and-clear-screen
 
-[[ -f $XDG_CONFIG_HOME/zsh/plugins/lfcd.zsh ]] && . $XDG_CONFIG_HOME/zsh/plugins/lfcd.zsh
-[[ -f $XDG_CONFIG_HOME/zsh/plugins/vi-mode-cursor.zsh ]] && . $XDG_CONFIG_HOME/zsh/plugins/vi-mode-cursor.zsh
-[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && . /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-[[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]] && . /usr/share/doc/pkgfile/command-not-found.zsh	# pkgfile "command not found" handler
+plugins=(lfcd vi-mode-cursor zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search command-not-found)
+for plugin in ${plugins[@]}; do
+	[ -f $XDG_CONFIG_HOME/zsh/plugins/$plugin.zsh ] && . $XDG_CONFIG_HOME/zsh/plugins/$plugin.zsh
+	[ -f /usr/share/zsh/plugins/$plugin/$plugin.zsh ] && . /usr/share/zsh/plugins/$plugin/$plugin.zsh
+	[ -f /usr/share/doc/pkgfile/$plugin.zsh ] && . /usr/share/doc/pkgfile/$plugin.zsh
+done
