@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pdfunite "$@" ZONG.pdf
+pdfcrop ZONG ZONG.pdf
+pdfjam --nup 1x2 ZONG.pdf --papersize '{210mm,297mm}' --scale 0.95 --outfile ZONG.pdf
