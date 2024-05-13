@@ -35,3 +35,4 @@ scroll-and-clear-screen() {
 bindkey '^l' scroll-and-clear-screen
 
 eval "$(sheldon source)"	# sheldon plugin manager
+[ -f /usr/share/doc/pkgfile/command-not-found.zsh ] && source /usr/share/doc/pkgfile/command-not-found.zsh
