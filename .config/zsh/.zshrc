@@ -34,9 +34,4 @@ scroll-and-clear-screen() {
 } && zle -N scroll-and-clear-screen
 bindkey '^l' scroll-and-clear-screen
 
-plugins=(lfcd vi-mode-cursor zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search command-not-found)
-for plugin in ${plugins[@]}; do
-	[ -f $XDG_CONFIG_HOME/zsh/plugins/$plugin.zsh ] && . $XDG_CONFIG_HOME/zsh/plugins/$plugin.zsh
-	[ -f /usr/share/zsh/plugins/$plugin/$plugin.zsh ] && . /usr/share/zsh/plugins/$plugin/$plugin.zsh
-	[ -f /usr/share/doc/pkgfile/$plugin.zsh ] && . /usr/share/doc/pkgfile/$plugin.zsh
-done
+eval "$(sheldon source)"	# sheldon plugin manager
