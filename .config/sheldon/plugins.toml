@@ -1,13 +1,16 @@
 [plugins]
 
-[plugins.hss]
-github = "zsh-users/zsh-history-substring-search"
+[plugins.cp]
+github = "zsh-users/zsh-completions"
+
+[plugins.as]
+github = "zsh-users/zsh-autosuggestions"
 
 [plugins.sh]
 github = "zsh-users/zsh-syntax-highlighting"
 
-[plugins.as]
-github = "zsh-users/zsh-autosuggestions"
+[plugins.hss]
+github = "zsh-users/zsh-history-substring-search"
 
 [plugins.vicursor]
 gist = "cfadf605824e42d50d5212967300a2ed"
