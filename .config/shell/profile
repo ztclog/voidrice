@@ -58,6 +58,7 @@ export FREETYPE_PROPERTIES="truetype:interpreter-version=35"	#uses FreeType to r
 export TELEGRAM_DESKTOP_UI_FONT="Sans"
 export TELEGRAM_DESKTOP_UI_FONT_MONO="Monospace"
 export TELEGRAM_DESKTOP_UI_FONT_BOLD_STYLE="Sans"
+export KEYTIMEOUT="5"			# The delay of pressing Esc key in vi mode to 0.05s
 
 # Native wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
@@ -65,7 +66,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	export QT_QPA_PLATFORM="wayland"	# Qt on wayland
 fi
 
-export STEAM_FORCE_DESKTOPUI_SCALING=2.0	# Steam Hidpi
+export STEAM_FORCE_DESKTOPUI_SCALING="2.0"	# Steam Hidpi
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
