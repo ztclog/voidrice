@@ -2,10 +2,10 @@ set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
 set icons true
-set mouse true
+set mouse false
 
-set previewer '~/.config/lf/pv.sh'
-set cleaner '~/.config/lf/clear_img.sh'
+set previewer '~/.config/lf/preview'
+set cleaner '~/.config/lf/cleaner'
 
 map <delete> delete
 map D %trash -v $fx
