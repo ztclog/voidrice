@@ -58,6 +58,6 @@ case $(echo ${1##*.} | tr [:upper:] [:lower:]) in
 		chafa -f sixel -s "$2x$3" --animate off --polite on "${CACHE}.jpg"
 		;;
 	ino) batorcat --language=cpp "$1" ;;
-	*) batorcat "$1" || file -ibL "$1" | grep -q text;;
+	*) file -ibL "$1" ;;
 esac
 exit 0
