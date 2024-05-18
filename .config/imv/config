@@ -1,0 +1,52 @@
+[options]
+width = 600
+height = 600
+scaling_mode = shrink
+suppress_default_binds = true
+
+[aliases]
+# Define aliases here. Any arguments passed to an alias are appended to the
+# command.
+# alias = command to run
+
+[binds]
+q = quit
+y = exec wl-copy $imv_current_file
+
+# Image navigation
+<Left> = prev
+<bracketleft> = prev
+<Right> = next
+<bracketright> = next
+gg = goto 1
+<Shift+G> = goto -1
+
+# Panning
+j = pan 0 -50
+k = pan 0 50
+h = pan 50 0
+l = pan -50 0
+
+# Zooming
+<Shift+plus> = zoom 100%
+<equal> = zoom 1
+<Down> = zoom -1
+<minus> = zoom -1
+
+# Rotate Clockwise by 90 degrees
+r = rotate by 90
+
+# Other commands
+x = close
+f = fullscreen
+i = overlay
+p = exec notify-send $imv_current_file
+c = center
+s = scaling next
+<Shift+S> = upscaling next
+a = zoom actual
+<Shift+R> = reset
+
+# Gif playback
+<period> = next_frame
+<space> = toggle_playing
