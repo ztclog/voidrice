@@ -9,10 +9,10 @@ These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
 	- zsh (shell)
 	- lf/ranger (file manager)
 	- mpd/ncmpcpp (music)
-	- sxiv (image/gif viewer)
+	- imv/sxiv (image/gif viewer)
 	- mpv (video player)
 	- other stuff like xdg default programs, inputrc and more, etc.
-- I try to minimize what's directly in `~` so:
+    - I try to minimize what's directly in `~` so:
 	- All configs that can be in `~/.config/` are.
 	- Some environmental variables moved into `~/.config/`
 
