@@ -1,3 +1,4 @@
+# options for imv
 [options]
 width = 600
 height = 600
@@ -37,6 +38,7 @@ l = pan -50 0
 r = rotate by 90
 
 # Other commands
+<Shift+E> = exec spectacle -E "$imv_current_file" &>/dev/null &
 x = close
 f = fullscreen
 i = overlay
