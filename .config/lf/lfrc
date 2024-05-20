@@ -1,20 +1,19 @@
-set shellopts '-eu'
+# lf config file
 set ifs "\n"
-set sixel true
-set scrolloff 10
 set icons true
+set sixel true
 set mouse false
-
+set drawbox true
+set scrolloff 10
+set ratios 1:2:4
+set shellopts '-eu'
 set previewer '~/.config/lf/preview'
-# set cleaner '~/.config/lf/cleaner'
 
 map X delete
 map <delete> delete
 map D %trash -v $fx
-map <c-z>  $trash-restore
-
-map E $nvim $f
-map <a-e> $sudo nvim $f
+map <a-e> $sudo $EDITOR $f # alt+e
+map <c-z> $trash-restore
 
 map J half-down
 map K half-up
@@ -73,6 +72,7 @@ map u	clear				# remap u from "unselect" to "clear"
 map U	unselect
 map cfg cd ~/.config
 map clo cd ~/.local/share
+map cac cd ~/.cache
 map g/	cd /
-map gd	cd ~/windows/D
 map ge	cd ~/windows/E/Downloads
+map <backspace2> %lf -remote "send $id cd "$OLDPWD""
