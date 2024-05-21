@@ -50,6 +50,7 @@ x = close
 p = exec notify-send $imv_current_file
 <Ctrl+r> = reset
 <Shift+E> = exec spectacle -E "$imv_current_file" &>/dev/null & # edit image
+<Ctrl+p> = exec notify-send "IMG2PDF already executed!"&& img2pdf -a -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
 
 # Gif playback
 <period> = next_frame
