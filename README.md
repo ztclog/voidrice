@@ -1,6 +1,6 @@
 # The Voidrice
 
-There are the configs mostly inspired by [Luke Smith](https://www.github.com/lukesmithxyz/voidrice).
+There are the configs mostly inspired by [Luke Smith's dotconfigs](https://www.github.com/lukesmithxyz/voidrice).
 
 - Settings for:
 	- mpv (video player)
