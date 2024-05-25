@@ -7,7 +7,7 @@ batorcat() {
 case "$(echo ${1##*.} | tr [:upper:] [:lower:])" in
 	a|ace|alz|apk|arc|arj|bz|bz2|cab|cpio|deb|gz|iso|jar|lha|lz|lzh|lzma|lzo|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst|rar|7z) atool -l "$1" ;;
 	torrent) transmission-show "$1" ;;
-	[1-8]|md|docx|html|odt) pandoc "$1" -t plain ;;
+	[1-8]|md|docx|html|epub|odt) pandoc "$1" -t plain ;;
 	wav|mp3|flac|m4a|wma|ape|ac3|og[agx]|spx|opus|as[fx]|mka) mediainfo "$1" ;;
 	xls|xlsx)
 		[ ! -f "${CACHE}.jpg" ] && ssconvert -T Gnumeric_pdf:pdf_assistant "$1" "fd://1" | pdftoppm -jpeg -f 1 -singlefile - "$CACHE"
