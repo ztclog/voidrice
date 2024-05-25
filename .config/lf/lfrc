@@ -5,7 +5,7 @@ set sixel true
 set mouse false
 set drawbox true
 set scrolloff 10
-set ratios 1:2:4
+set ratios 1:2:3
 set shellopts '-eu'
 set previewer '~/.config/lf/preview'
 

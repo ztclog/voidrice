@@ -3,9 +3,9 @@
 # profile file. Runs on login. Environmental variables are set here.
 
 # Adds `~/.local/bin` to $PATH
-# [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
-# export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+[ -d "$HOME/.local/share/npm/bin" ] && export PATH="$PATH:$HOME/.local/share/npm/bin"
+
 
 # Default programs:
 export EDITOR="nvim"
@@ -31,8 +31,7 @@ export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
 
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
@@ -49,6 +48,7 @@ export WINEARCH="win32"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefix"
 
 export W3M_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/w3m"
+
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # Other program settings:
@@ -58,14 +58,14 @@ export FREETYPE_PROPERTIES="truetype:interpreter-version=35"	#uses FreeType to r
 export TELEGRAM_DESKTOP_UI_FONT="Sans"
 export TELEGRAM_DESKTOP_UI_FONT_MONO="Monospace"
 export TELEGRAM_DESKTOP_UI_FONT_BOLD_STYLE="Sans"
-export KEYTIMEOUT="5"			# The delay of pressing Esc key in vi mode to 0.05s
+export KEYTIMEOUT=1
 
 # Native wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	export MOZ_ENABLE_WAYLAND="1"		# Firefox support Wayland
 	export QT_QPA_PLATFORM="wayland"	# Qt on wayland
 fi
-
+# export GDK_SCALE=2	# Hidpi support
 export STEAM_FORCE_DESKTOPUI_SCALING="2.0"	# Steam Hidpi
 
 # Use $XINITRC variable if file exists.
