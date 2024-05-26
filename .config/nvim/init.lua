@@ -70,6 +70,8 @@ local opts = {}
 require("lazy").setup(plugins, opts)
 require("hlslens").setup()
 
+-- cargo install
+require'lspconfig'.harper_ls.setup{}
 -- npm i -g 
 require'lspconfig'.astro.setup{}
 -- pacman -S

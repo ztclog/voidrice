@@ -2,6 +2,8 @@
 # PATH
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 [ -d "$HOME/.local/share/npm/bin" ] && export PATH="$PATH:$HOME/.local/share/npm/bin"
+[ -d "$HOME/.local/share/cargo/bin" ] && export PATH="$PATH:$HOME/.local/share/cargo/bin"
+export PATH="$(echo $PATH | tr ':' '\n' | awk '!x[$0]++' | paste -sd ':' -)"
 
 # Default programs
 export PAGER="less"
