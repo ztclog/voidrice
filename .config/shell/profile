@@ -1,74 +1,60 @@
 #!/bin/sh
-
-# profile file. Runs on login. Environmental variables are set here.
-
-# Adds `~/.local/bin` to $PATH
+# PATH
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 [ -d "$HOME/.local/share/npm/bin" ] && export PATH="$PATH:$HOME/.local/share/npm/bin"
 
-
-# Default programs:
+# Default programs
+export PAGER="less"
 export EDITOR="nvim"
 export TERMINAL="foot"
-# export BROWSER="google-chrome-stable"
 export BROWSER="firefox"
 
 # Color output
-export PAGER="less"
 export LESS="R"
+export GROFF_NO_SGR=1	# colorize manpage
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
-export GROFF_NO_SGR=1	# color man page
 
-# ~/ Clean-up:
+# ~/ Clean-up
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-
-export WECHAT_DATA_DIR="$HOME/.local/share/WeChat_Data"
-
-export TEXMFHOME="$XDG_DATA_HOME/texmf"
-export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
-export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
-
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
-
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
-export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
-
-export TS3_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ts3client"
-
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 
-export WINEARCH="win32"
-export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefix"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
+export TS3_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ts3client"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 
 export W3M_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/w3m"
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefix"
+export WECHAT_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/WeChat_Data"
 
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
-# Other program settings:
-export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
-export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
-export FREETYPE_PROPERTIES="truetype:interpreter-version=35"	#uses FreeType to render fonts for wine
+export TEXMFHOME="${XDG_DATA_HOME:-$HOME/.local/share}/texmf"
+export TEXMFVAR="${XDG_CACHE_HOME:-$HOME/.cache}/texlive/texmf-var"
+export TEXMFCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/texlive/texmf-config"
+
+# Other program settings
+export KEYTIMEOUT=1
+export WINEARCH="win32"
+export MOZ_USE_XINPUT2="1"					# Mozilla smooth scrolling/touchpads.
+export QT_QPA_PLATFORMTHEME="gtk2"				# Have QT use Gtk2 theme.
 export TELEGRAM_DESKTOP_UI_FONT="Sans"
+export STEAM_FORCE_DESKTOPUI_SCALING="2.0"			# Steam Hidpi
 export TELEGRAM_DESKTOP_UI_FONT_MONO="Monospace"
 export TELEGRAM_DESKTOP_UI_FONT_BOLD_STYLE="Sans"
-export KEYTIMEOUT=1
+export FREETYPE_PROPERTIES="truetype:interpreter-version=35"	# Uses FreeType to render fonts for wine
 
-# Native wayland
-if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-	export MOZ_ENABLE_WAYLAND="1"		# Firefox support Wayland
-	export QT_QPA_PLATFORM="wayland"	# Qt on wayland
-fi
-# export GDK_SCALE=2	# Hidpi support
-export STEAM_FORCE_DESKTOPUI_SCALING="2.0"	# Steam Hidpi
+# Firfox & Qt native wayland
+[ "$XDG_SESSION_TYPE" = "wayland" ] && export MOZ_ENABLE_WAYLAND="1" &&	export QT_QPA_PLATFORM="wayland" 
 
-# Use $XINITRC variable if file exists.
-[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"		# Use $XINITRC variable if file exists.
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" # Load aliases
