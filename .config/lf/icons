@@ -13,20 +13,19 @@
 # sg      g       # SETGID
 # ex      x       # EXEC
 # fi      -       # FILE
-# fi	"📃"
-fi      "--"      # FILE
-so	"s "
 
+# DIY icons
+fi      "--"	# 📃
+so	"s "
 di	"📁"
 tw	"🗂️"
 ow	"📂"
-ln	"📎"
-# ln	"🧬"
+ln	"📎"	# 🧬
 or	"❗"
 ex	"♻️"
 
-*.bin	"⚙️"
-*.exe	"⚙️"
+*.bin	"🇪 "
+*.exe	"🇪 "
 
 *config	"📄"
 *.conf	"📄"
@@ -84,9 +83,9 @@ ex	"♻️"
 
 # archives or compressed (extensions from dircolors defaults)
 *.tar   "📥"
-*.tgz   "📥"
-*.arc   "📥"
-*.arj   "📥"
+*.tgz   "📥"
+*.arc   "📥"
+*.arj   "📥"
 *.taz   "📥"
 *.lha   "📥"
 *.lz4   "📥"

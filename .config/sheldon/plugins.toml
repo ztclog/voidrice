@@ -12,8 +12,8 @@ github = "zsh-users/zsh-syntax-highlighting"
 [plugins.hss]
 github = "zsh-users/zsh-history-substring-search"
 
-[plugins.vicursor]
-gist = "cfadf605824e42d50d5212967300a2ed"
-
 [plugins.lfcd]
 gist = "2405ee9326a4901e9fe6ba66b1cca476"
+
+[plugins.vicursor]
+gist = "cfadf605824e42d50d5212967300a2ed"
