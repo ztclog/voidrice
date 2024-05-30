@@ -3,8 +3,8 @@
 width = 600
 height = 600
 scaling_mode = shrink
-suppress_default_binds = true
 overlay_font = Serif:10
+suppress_default_binds = true
 
 [aliases]
 # Define aliases here. Any arguments passed to an alias are appended to the
@@ -16,12 +16,14 @@ q = quit
 y = exec wl-copy $imv_current_file
 
 # Image navigation
-<Left> = prev
-<bracketleft> = prev
-<Right> = next
-<bracketright> = next
 gg = goto 1
 <Shift+G> = goto -1
+<Left> = prev
+<Right> = next
+<Shift+K> = prev
+<Shift+J> = next
+<bracketleft> = prev
+<bracketright> = next
 
 # Panning
 j = pan 0 -50
@@ -50,7 +52,7 @@ x = close
 p = exec notify-send $imv_current_file
 <Ctrl+r> = reset
 <Shift+E> = exec spectacle -E "$imv_current_file" &>/dev/null & # edit image
-<Ctrl+p> = exec notify-send "IMG2PDF already executed!"&& img2pdf -a -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
+<Ctrl+p> = exec notify-send "IMG2PDF already executed!" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
 
 # Gif playback
 <period> = next_frame

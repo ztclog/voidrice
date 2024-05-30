@@ -1,4 +1,3 @@
-# lf config file
 set ifs "\n"
 set icons true
 set sixel true
