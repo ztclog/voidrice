@@ -18,8 +18,10 @@ y = exec wl-copy $imv_current_file
 # Image navigation
 gg = goto 1
 <Shift+G> = goto -1
+<Tab> = next
 <Left> = prev
 <Right> = next
+<grave> = prev
 <Shift+K> = prev
 <Shift+J> = next
 <bracketleft> = prev
