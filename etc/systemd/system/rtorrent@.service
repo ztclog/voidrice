@@ -9,7 +9,7 @@ Group=%i
 WorkingDirectory=/home/%i
 # Modify the next line to the absolute path for rtorrent.lock, for example
 ExecStartPre=-/bin/rm -f /home/%i/.config/rtorrent/session/rtorrent.lock
-ExecStart=/usr/bin/rtorrent -o system.daemon.set=true
+ExecStart=/usr/bin/rtorrent
 Restart=on-failure
 RestartSec=3
 
