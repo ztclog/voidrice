@@ -1,5 +1,9 @@
 directory.default.set = /home/ztclog/dl
 session.path.set = ~/.config/rtorrent/session
+method.redirect=load.throw,load.normal
+method.redirect=load.start_throw,load.start
+method.insert=d.down.sequential,value|const,0
+method.insert=d.down.sequential.set,value|const,0
 network.port_range.set = 33313-33313
 pieces.hash.on_completion.set = no
 trackers.use_udp.set = yes
