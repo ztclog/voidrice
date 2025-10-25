@@ -2,10 +2,15 @@ user_pref("geo.enabled",false);
 user_pref("pdfjs.disable",true);
 user_pref("clipboard.autocopy",	false);
 user_pref("font.language.grou",	"zh-CN");
+user_pref("font.default.zh-CN", "serif");
+user_pref("font.name.serif.zh-CN", "Noto Serif");
+user_pref("font.name.monospace.zh-CN", "monospace");
+user_pref("font.name.sans-serif.zh-CN", "Noto Sans");
+
 user_pref("media.ffmpeg.vaapi.enable", true);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 
-user_pref("widget.gtk.global-menu.enabled", false);		// 全局菜单与firefox ui空白 冲突
+user_pref("widget.gtk.global-menu.enabled", false);		// 全局菜单 添加此项去除多于空白
 user_pref("widget.gtk.global-menu.wayland.enabled", true);	// 全局菜单
 
 user_pref("sidebar.visibility", "expand-on-hover");
