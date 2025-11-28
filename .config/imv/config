@@ -13,7 +13,8 @@ suppress_default_binds = true
 
 [binds]
 q = quit
-y = exec wl-copy < $imv_current_file && notify-send -a IMV "Image copied to clipboard."
+y = exec [ ! -x /usr/bin/wl-copy ] && notify-send -a IMV "Wl-copy not installed" || wl-copy < $imv_current_file && notify-send -a IMV "Image copied to clipboard." # edit image
+<Ctrl+c> = exec [ ! -x /usr/bin/wl-copy ] && notify-send -a IMV "Wl-copy not installed" || wl-copy < $imv_current_file && notify-send -a IMV "Image copied to clipboard." # edit image
 
 # Image navigation
 gg = goto 1
@@ -51,9 +52,10 @@ c = center
 f = fullscreen
 i = overlay
 x = close
-p = exec notify-send $imv_current_file
+p = exec notify-send -a IMV $imv_current_file
 <Ctrl+r> = reset
-<Shift+E> = exec spectacle -E "$imv_current_file" &>/dev/null & # edit image
+e = exec [ ! -x /usr/bin/spectacle ] && notify-send -a IMV "Spectacle not installed" || spectacle -E "$imv_current_file" &>/dev/null & # edit image
+<Shift+E> = exec [ ! -x /usr/bin/spectacle ] && notify-send -a IMV "Spectacle not installed" || spectacle -E "$imv_current_file" &>/dev/null & # edit image
 <Ctrl+p> = exec notify-send -a IMV "IMG2PDF already executed!" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
 
 # Gif playback
