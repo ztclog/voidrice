@@ -11,9 +11,10 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ip="ip -c" \
 	grep="grep --color" \
-	ip="ip -c"
+	cat="bat --color=always -p" \
+	ls="ls -hN --color=auto --group-directories-first"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -22,7 +23,7 @@ alias \
 	la="ls -a" \
 	ll="ls -al" \
 	lg="lazygit" \
-	nl="fastfetch | lolcat" \
+	nl="fastfetch | lolcat"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
@@ -33,5 +34,5 @@ alias \
 
 # Verbose less
 alias \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
 	ffprobe="ffprobe -hide_banner"
