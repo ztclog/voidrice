@@ -13,7 +13,7 @@ suppress_default_binds = true
 
 [binds]
 q = quit
-y = exec wl-copy $imv_current_file
+y = exec wl-copy < $imv_current_file && notify-send -a IMV "Image copied to clipboard."
 
 # Image navigation
 gg = goto 1
@@ -54,7 +54,7 @@ x = close
 p = exec notify-send $imv_current_file
 <Ctrl+r> = reset
 <Shift+E> = exec spectacle -E "$imv_current_file" &>/dev/null & # edit image
-<Ctrl+p> = exec notify-send "IMG2PDF already executed!" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
+<Ctrl+p> = exec notify-send -a IMV "IMG2PDF already executed!" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
 
 # Gif playback
 <period> = next_frame
