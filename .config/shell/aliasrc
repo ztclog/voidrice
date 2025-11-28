@@ -22,7 +22,7 @@ alias \
 	la="ls -a" \
 	ll="ls -al" \
 	lg="lazygit" \
-	nl="neofetch | lolcat" \
+	nl="fastfetch | lolcat" \
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
@@ -30,3 +30,8 @@ alias \
 	mv="mv -iv" \
 	rm="rm -vI" \
 	mkd="mkdir -pv"
+
+# Verbose less
+alias \
+	ffmpeg="ffmpeg -hide_banner"
+	ffprobe="ffprobe -hide_banner"
