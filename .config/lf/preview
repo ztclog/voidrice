@@ -1,13 +1,13 @@
 #!/bin/sh
 CACHE="$HOME/.cache/lf/thumbnail.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$1")" | sha256sum | awk '{print $1}'))"
 batorcat() {
-	[ ! -z "$(command -v bat)" ] && bat --wrap=never --color=always --style=plain "$@" || highlight -O ansi "$@" || cat "$@"
+	[ ! file -ibL "$@" | grep binary ] && bat --wrap=never --color=always --style=plain "$@"
 }
 
 case "$(echo ${1##*.} | tr [:upper:] [:lower:])" in
 	a|ace|alz|apk|arc|arj|bz|bz2|cab|cpio|deb|gz|iso|jar|lha|lz|lzh|lzma|lzo|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst|rar|7z) atool -l "$1" ;;
 	torrent) transmission-show "$1" ;;
-	[1-8]|md|docx|html|epub|odt) pandoc "$1" -t plain ;;
+	[1-8]|md|docx|html|odt) pandoc "$1" -t plain ;;
 	wav|mp3|flac|m4a|wma|ape|ac3|og[agx]|spx|opus|as[fx]|mka) mediainfo "$1" ;;
 	xls|xlsx)
 		[ ! -f "${CACHE}.jpg" ] && ssconvert -T Gnumeric_pdf:pdf_assistant "$1" "fd://1" | pdftoppm -jpeg -f 1 -singlefile - "$CACHE"
@@ -28,5 +28,5 @@ case "$(echo ${1##*.} | tr [:upper:] [:lower:])" in
 		[ ! -f "${CACHE}.jpg" ] && convert "$1" "${CACHE}.jpg"
 		chafa -f sixel -s "$2x$3" --animate off --polite on "${CACHE}.jpg"
 		;;
-	*) batorcat "$1" || file -ibL "$1" ;;
+	*) batorcat "$1" || file -ibL "$1" && [ -z "$(command -v bat)" ] && notify-send -a lf "bat not installed" ;;
 esac
