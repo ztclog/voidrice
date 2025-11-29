@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "ztclog@love",
+                "Name": "ztclog"
+            }
+        ],
+        "Description": "",
+        "Id": "ztclog.DarkLove",
+        "License": "LGPL 2.1+",
+        "Name": "ztclog.darklove",
+        "Website": "ztclog.love"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;",
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-MainScript": "default"
+}

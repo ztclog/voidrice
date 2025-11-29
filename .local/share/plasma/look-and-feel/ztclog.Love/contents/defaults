@@ -1,0 +1,24 @@
+[kcminputrc][Mouse]
+cursorTheme=WhiteSur-cursors
+
+[kdeglobals][General]
+ColorScheme=BreezeLight
+
+[kdeglobals][Icons]
+Theme=Tela-pink
+
+[kdeglobals][KDE]
+widgetStyle=Breeze
+
+[kwinrc][DesktopSwitcher]
+LayoutName=org.kde.breeze.desktop
+
+[kwinrc][WindowSwitcher]
+LayoutName=org.kde.breeze.desktop
+
+[kwinrc][org.kde.kdecoration2]
+library=org.kde.breeze
+theme=Breeze 微风
+
+[plasmarc][Theme]
+name=default
