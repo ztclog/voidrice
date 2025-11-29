@@ -1,5 +1,5 @@
 set ifs "\n"
-set icons true
+set icons false
 set sixel true
 set sortby ext
 set mouse false
@@ -7,6 +7,7 @@ set scrolloff 10
 set ratios 1:2:3
 set drawbox true
 set shellopts '-eu'
+#set previewer '~/.config/lf/scope'
 set previewer '~/.config/lf/preview'
 
 map X delete
@@ -14,6 +15,10 @@ map <delete> delete
 map D %trash -v $fx
 map <a-e> $sudo $EDITOR $f # alt+e
 map <c-z> $trash-restore
+
+# dedicated keys for file opener actions
+map o &mimeopen $f
+map O $mimeopen --ask $f
 
 map J half-down
 map K half-up
@@ -44,6 +49,7 @@ map I :rename; cmd-home # at the very beginning
 map A :rename; cmd-end 	# at the very end
 map R push A<c-u> 	# new rename
 map <a-r> bulkrename	# bulkrename
+map <f-2> :rename; cmd-delete-home	# before extension & delete home
 
 map <enter> shell
 map <c-n> push $touch<space>		# intend to creat a new file and edit it
@@ -58,13 +64,16 @@ map =+x  %chmod +x $fx
 map =-x  %chmod -x $fx
 map =766 %chmod 766 $fx
 
+map <f-4> &dolphin --select $fx .
 map <s-f-4> &dolphin --select $fx .
 
-map zc $unzip -O CP936 $f -d ${f%.*} # only for Chinese Charset zips
-map zx %7z x -o${f%.*} $f
-map zz %7z a $f.zip $fx | grep archive # "a -mx9 file.7z" for best compression ratio
+map zz %echo "Z -- Capitalized used for compress"
+map Zc $unzip -O CP936 $f -d ${f%.*} # only for Chinese Charset zips
+map Zx &7z x -o${f%.*} $f
+map Zz &7z a $f.zip $fx | grep archive	# zip: most common one
+map ZZ &7z a -mx9 $f.7z $fx | grep archive	# best compression ratio
 
-map x &$f
+map xx &$f
 
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
