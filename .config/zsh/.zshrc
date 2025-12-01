@@ -36,3 +36,14 @@ bindkey '^l' scroll-and-clear-screen
 
 eval "$(sheldon source)"	# sheldon plugin manager
 [ -f /usr/share/doc/pkgfile/command-not-found.zsh ] && source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# foot-zsh Intergration
+# must after sheldon modules
+# watch out the line order
+precmd() {
+	print -n "\e]133;D\e\\"
+	print -Pn "\e]133;A\e\\"
+}
+preexec (){
+	print -n "\e]133;C\e\\"
+}
