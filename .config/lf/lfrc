@@ -1,6 +1,6 @@
 set ifs "\n"
 set icons false
-set sixel true
+#set sixel true	# 39 no more support
 set sortby ext
 set mouse false
 set scrolloff 10
@@ -10,19 +10,49 @@ set shellopts '-eu'
 #set previewer '~/.config/lf/scope'
 set previewer '~/.config/lf/preview'
 
+# lf handler
+map xx &$f
 map X delete
 map <delete> delete
 map D %trash -v $fx
-map <a-e> $sudo $EDITOR $f # alt+e
+map <a-e> $sudo -e nvim $f # alt+e
 map <c-z> $trash-restore
+
+map <enter> shell
+
+map <c-n> push $touch<space>		# intend to creat a new file and edit it
+map <a-n> push $mkdir<space>-p<space>	# intend to creat a new folder
+
+map p					# unbind p "paste"
+map pp	paste
+map pl	%ln -si $fx .
+map pL	%ln -sir $fx .
+
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
 map O $mimeopen --ask $f
+map i $[ ! $(file -ibL $f | grep text) ] && (mediainfo $f | bat -l yaml --color=always --paging always -p) || bat --color=always --paging always -p $f 2>/dev/null
+map <tab> $mediainfo $f | bat -l yaml --color=always --paging always -p 
+map <f-4> &dolphin --select $fx .
+map <s-f-4> &dolphin --select $fx .
 
+# navigation
 map J half-down
 map K half-up
 
+# fast jump
+map c					# unbind c "clear"
+map u	clear				# remap u from "unselect" to "clear"
+map U	unselect
+map cfg cd ~/.config
+map clo cd ~/.local/share
+map cac cd ~/.cache
+map g/	cd /
+map ge	cd ~/windows/E/Downloads
+map <backspace2> %lf -remote "send $id cd "$OLDPWD""
+
+# rename
 cmd bulkrename ${{
 	tmpfile_old="$(mktemp)"
 		tmpfile_new="$(mktemp)"
@@ -43,47 +73,26 @@ cmd bulkrename ${{
 					rm -f "$tmpfile_old" "$tmpfile_new"
 					lf -remote "send $id unselect"
 }}
-
-map r :rename		# before extension
-map I :rename; cmd-home # at the very beginning
-map A :rename; cmd-end 	# at the very end
-map R push A<c-u> 	# new rename
-map <a-r> bulkrename	# bulkrename
+map r :rename				# before extension
+map I :rename; cmd-home 		# at the very beginning
+map A :rename; cmd-end 			# at the very end
+map R push A<c-u> 			# new rename
+map <a-r> bulkrename			# bulkrename
 map <f-2> :rename; cmd-delete-home	# before extension & delete home
 
-map <enter> shell
-map <c-n> push $touch<space>		# intend to creat a new file and edit it
-map <a-n> push $mkdir<space>-p<space>	# intend to creat a new folder
-map p					# unbind p "paste"
-map pp	paste
-map pl	%ln -si $fx .
-map pL	%ln -sir $fx .
-
+# chmod
 map ==   push %chmod<space><space>$fx<c-b><c-b><c-b><c-b>
 map =+x  %chmod +x $fx
 map =-x  %chmod -x $fx
 map =766 %chmod 766 $fx
 
-map <f-4> &dolphin --select $fx .
-map <s-f-4> &dolphin --select $fx .
-
+# zip & unzip
 map zz %echo "Z -- Capitalized used for compress"
-map Zc $unzip -O CP936 $f -d ${f%.*} # only for Chinese Charset zips
-map Zx &7z x -o${f%.*} $f
-map Zz &7z a $f.zip $fx | grep archive	# zip: most common one
+map Zc $unzip -O CP936 $f -d ${f%.*}		# only for Chinese Charset zips
+map Zx &7z x -o${f%.*} $f			# unzip using 7z
+map Zz &7z a $f.zip $fx | grep archive		# zip: most common one
 map ZZ &7z a -mx9 $f.7z $fx | grep archive	# best compression ratio
 
-map xx &$f
-
+#cmap
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
-
-map c					# unbind c "clear"
-map u	clear				# remap u from "unselect" to "clear"
-map U	unselect
-map cfg cd ~/.config
-map clo cd ~/.local/share
-map cac cd ~/.cache
-map g/	cd /
-map ge	cd ~/windows/E/Downloads
-map <backspace2> %lf -remote "send $id cd "$OLDPWD""
