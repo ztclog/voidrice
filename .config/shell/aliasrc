@@ -14,7 +14,7 @@ alias \
 	ip="ip -c" \
 	grep="grep --color" \
 	ls="ls -hN --color=auto --group-directories-first"
-[ -x /usr/bin/bat ] && alias cat="$PAGER"
+[ -x /usr/bin/bat ] && alias cat="bat --color=always --paging always -p"
 
 # These common commands are just too long! Abbreviate them.
 alias \
