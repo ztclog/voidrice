@@ -57,7 +57,7 @@ p = exec notify-send -a IMV $imv_current_file
 <Ctrl+r> = reset
 e = exec [ ! -x /usr/bin/spectacle ] && notify-send -a IMV "Spectacle not installed" || spectacle -E "$imv_current_file" &>/dev/null & # edit image
 <Shift+E> = exec [ ! -x /usr/bin/spectacle ] && notify-send -a IMV "Spectacle not installed" || spectacle -E "$imv_current_file" &>/dev/null & # edit image
-<Ctrl+p> = exec notify-send -a IMV "IMG2PDF already executed!" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null & # img2pdf
+<Ctrl+p> = exec [ ! -x /usr/bin/img2pdf ] && notify-send -a IMV "img2pdf not found" || (notify-send "Converted" && img2pdf -a -r ifvalid -S A4 -f into "$imv_current_file" | zathura - &>/dev/null &)
 
 # Gif playback
 <period> = next_frame
