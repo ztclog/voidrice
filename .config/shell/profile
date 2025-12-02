@@ -1,6 +1,6 @@
 #!/bin/sh
 # Default programs
-export PAGER="less"
+[ -x /usr/bin/bat ] && export PAGER="bat --color=always --paing=always -p" || export PAGER="less"
 export EDITOR="nvim"
 export TERMINAL="foot"
 export BROWSER="firefox"
