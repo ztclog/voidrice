@@ -13,8 +13,8 @@ alias \
 alias \
 	ip="ip -c" \
 	grep="grep --color" \
-	cat="bat --color=always -p" \
 	ls="ls -hN --color=auto --group-directories-first"
+[ -x /usr/bin/bat ] && alias cat="$PAGER"
 
 # These common commands are just too long! Abbreviate them.
 alias \
