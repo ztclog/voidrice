@@ -40,13 +40,15 @@ export TEXMFCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/texlive/texmf-config"
 
 # Other program settings
 export KEYTIMEOUT=1
-export GDK_SCALE="2.0"						# GTK Hidpi
+export XCURSOR_SIZE=24						# to dismiss imv 5.0.0 warnings on wayland
+export GDK_SCALE="1.0"						# GTK Hidpi
 export WINEARCH="win32"
 export MOZ_USE_XINPUT2="1"					# Mozilla smooth scrolling/touchpads.
 export QT_SCALE_FACTOR="1.0"					# Qt Hidpi
 export QT_QPA_PLATFORMTHEME="gtk2"				# Have QT use Gtk2 theme.
+export WECHAT_IME_WORKAROUND="fcitx"      # Wechat fcitx input method
 export TELEGRAM_DESKTOP_UI_FONT="Sans"
-export STEAM_FORCE_DESKTOPUI_SCALING="2.0"			# Steam Hidpi
+export STEAM_FORCE_DESKTOPUI_SCALING="1.0"			# Steam Hidpi
 export TELEGRAM_DESKTOP_UI_FONT_MONO="Monospace"
 export TELEGRAM_DESKTOP_UI_FONT_BOLD_STYLE="Serif"
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"	# Uses FreeType to render fonts for wine
