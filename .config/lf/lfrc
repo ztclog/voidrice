@@ -32,7 +32,7 @@ map pL	%ln -sir $fx .
 # dedicated keys for file opener actions
 map o &mimeopen $f
 map O $mimeopen --ask $f
-map i $[ ! $(file -ibL $f | grep text) ] && (mediainfo $f | bat -l yaml --color=always --paging always -p) || bat --color=always --paging always -p $f 2>/dev/null
+map i $[ ! $(file -ibL $f | grep -i -e text -e ascii) ] && (mediainfo $f | bat -l yaml --color=always --paging always -p) || bat --color=always --paging always -p $f 2>/dev/null
 map <tab> $mediainfo $f | bat -l yaml --color=always --paging always -p 
 map <f-4> &dolphin --select $fx .
 map <s-f-4> &dolphin --select $fx .
