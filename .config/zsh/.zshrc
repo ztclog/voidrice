@@ -1,8 +1,8 @@
 autoload -U colors compinit && colors && compinit
 prompt=%B%F{green}%1~' '%f%b  # 设置默认命令行提示符样式
 
-bindkey '^[[P' delete-char # delete
-bindkey -M vicmd '^[[P' delete-char
+bindkey '^[[3~' delete-char # delete
+bindkey -M vicmd '^[[3~' delete-char
 bindkey '^?' backward-delete-char
 bindkey '^[[Z' reverse-menu-complete # shift+tab
 
@@ -37,9 +37,8 @@ bindkey '^l' scroll-and-clear-screen
 eval "$(sheldon source)"	# sheldon plugin manager
 [ -f /usr/share/doc/pkgfile/command-not-found.zsh ] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
-# foot-zsh Intergration
-# must after sheldon modules
-# watch out the line order
+# foot-zsh Intergration must after sheldon modules
+# preexec must after precmd
 precmd() {
 	print -n "\e]133;D\e\\"
 	print -Pn "\e]133;A\e\\"
