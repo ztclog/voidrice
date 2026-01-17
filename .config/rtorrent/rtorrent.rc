@@ -1,5 +1,5 @@
 directory.default.set = /home/ztclog/dl
-session.path.set = ~/.config/rtorrent/session
+session.path.set = /home/foobar/.config/rtorrent/session
 method.redirect=load.throw,load.normal
 method.redirect=load.start_throw,load.start
 method.insert=d.down.sequential,value|const,0
