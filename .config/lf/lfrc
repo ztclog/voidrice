@@ -1,6 +1,6 @@
 set ifs "\n"
 set icons false
-#set sixel true	# 39 no more support
+#set sixel true
 set sortby ext
 set mouse false
 set scrolloff 10
@@ -15,7 +15,7 @@ map xx &$f
 map X delete
 map <delete> delete
 map D %trash -v $fx
-map <a-e> $sudo -e nvim $f # alt+e
+map <a-e> $sudo -E nvim $f # alt+e
 map <c-z> $trash-restore
 
 map <enter> shell
@@ -49,8 +49,12 @@ map cfg cd ~/.config
 map clo cd ~/.local/share
 map cac cd ~/.cache
 map g/	cd /
-map ge	cd ~/windows/E/Downloads
+map ge	cd ~/windows/
 map <backspace2> %lf -remote "send $id cd "$OLDPWD""
+
+# image edit
+map gr &gm mogrify -rotate 90 $fs	# 图片顺时针旋转 90 度 
+map gR &gm mogrify -rotate -90 $fs	# 图片逆时针旋转 90 度
 
 # rename
 cmd bulkrename ${{
