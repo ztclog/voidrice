@@ -53,8 +53,8 @@ map ge	cd ~/windows/
 map <backspace2> %lf -remote "send $id cd "$OLDPWD""
 
 # image edit
-map gr &gm mogrify -rotate 90 $fs	# 图片顺时针旋转 90 度 
-map gR &gm mogrify -rotate -90 $fs	# 图片逆时针旋转 90 度
+map gr &gm mogrify -rotate 90 $fx	# 图片顺时针旋转 90 度 
+map gR &gm mogrify -rotate -90 $fx	# 图片逆时针旋转 90 度
 
 # rename
 cmd bulkrename ${{
