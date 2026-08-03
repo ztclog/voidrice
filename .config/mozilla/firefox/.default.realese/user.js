@@ -16,6 +16,7 @@ user_perf("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_perf("browser.aboutConfig.showWarning", false);
 user_perf("browser.download.useDownloadDir", false);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
+user_perf("browser.urlbar.scotchBonnet.enableOverride", false);
 user_perf("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_perf("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 
