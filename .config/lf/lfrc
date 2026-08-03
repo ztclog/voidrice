@@ -50,7 +50,17 @@ map clo cd ~/.local/share
 map cac cd ~/.cache
 map g/	cd /
 map ge	cd ~/windows/
-map <backspace2> %lf -remote "send $id cd "$OLDPWD""
+map gw	cd ~/windows/workshop
+map <backspace> %lf -remote "send $id cd "$OLDPWD""
+
+# fuzzy jump & search
+cmd fzf_jump ${{
+  res="$(fd -HL . | fzf --reverse --header="Jump to location" || true)"		# fd & fzf required
+  [ -d "$res" ] && cmd="cd" || cmd="select"
+  res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+  lf -remote "send $id $cmd \"$res\""
+}}
+map F :fzf_jump
 
 # image edit
 map gr !gm mogrify -monitor -rotate 90 $fx	# 图片顺时针旋转 90 度 
@@ -58,24 +68,18 @@ map gR !gm mogrify -monitor -rotate -90 $fx	# 图片逆时针旋转 90 度
 
 # rename
 cmd bulkrename ${{
-	tmpfile_old="$(mktemp)"
-		tmpfile_new="$(mktemp)"
-
-		[ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
-
-		echo "$fs" > "$tmpfile_old"
-			echo "$fs" > "$tmpfile_new"
-			$EDITOR "$tmpfile_new"
-
-			[ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
-
-	paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
-		do
-			[ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
-				done
-
-					rm -f "$tmpfile_old" "$tmpfile_new"
-					lf -remote "send $id unselect"
+  tmpfile_old="$(mktemp)"
+  tmpfile_new="$(mktemp)"
+  [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+  echo "$fs" > "$tmpfile_old"
+  echo "$fs" > "$tmpfile_new"
+  $EDITOR "$tmpfile_new"
+  [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+  paste "$tmpfile_old" "$tmpfile_new" | while IFS=$'\t' read -r src dst; do
+      [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+  done
+  rm -f "$tmpfile_old" "$tmpfile_new"
+  lf -remote "send $id unselect"
 }}
 map r :rename				# before extension
 map I :rename; cmd-home 		# at the very beginning
