@@ -1,7 +1,9 @@
 /* ===== 隐藏地址栏的收藏按钮和右上角的窗口控制按钮（最小化/最大化/关闭） ===== */
-#star-button-box,
-.titlebar-buttonbox-container {
+#star-button-box {
 	display: none !important;
+}
+@media (-moz-platform: linux) {
+    .titlebar-buttonbox-container { display: none !important; }
 }
 
 /* ===== 让标签栏和导航栏背景透明，去除色差 ===== */
