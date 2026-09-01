@@ -6,8 +6,14 @@ export TERMINAL="foot"
 export BROWSER="firefox"
 
 # Color output
-export LESS="R"
-export GROFF_NO_SGR=1	# colorize manpage
+export LESS="RIK"
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 1)	# man colorize
+export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+export LESS_TERMCAP_se=$(tput sgr0)
+export LESS_TERMCAP_us=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_ue=$(tput sgr0)
 export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 # ~/ Clean-up
@@ -46,7 +52,7 @@ export WINEARCH="win32"
 export MOZ_USE_XINPUT2="1"					# Mozilla smooth scrolling/touchpads.
 export QT_SCALE_FACTOR="1.0"					# Qt Hidpi
 export QT_QPA_PLATFORMTHEME="gtk2"				# Have QT use Gtk2 theme.
-export WECHAT_IME_WORKAROUND="fcitx"      # Wechat fcitx input method
+export WECHAT_IME_WORKAROUND="fcitx"
 export TELEGRAM_DESKTOP_UI_FONT="Sans"
 export STEAM_FORCE_DESKTOPUI_SCALING="1.0"			# Steam Hidpi
 export TELEGRAM_DESKTOP_UI_FONT_MONO="Monospace"
