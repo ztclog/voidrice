@@ -6,8 +6,9 @@ export TERMINAL="foot"
 export BROWSER="firefox"
 
 # Color output
+export GROFF_NO_SGR=1	# colorize manpage
 export LESS="RIK"
-export LESS_TERMCAP_mb=$(tput bold; tput setaf 1)	# man colorize
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 1)
 export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
 export LESS_TERMCAP_me=$(tput sgr0)
 export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
