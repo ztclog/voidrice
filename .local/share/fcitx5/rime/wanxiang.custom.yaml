@@ -1,0 +1,7 @@
+patch:
+  "translator/packs/+":
+    - moegirl
+    - zhwiki
+  "switches/@3/reset": 1    # emoji 表情开
+  "switches/@5/reset": 1    # context_reorder 上下文开
+  "switches/@13/reset": 1   # english 英文开
