@@ -35,7 +35,7 @@ ModifierOnlyKeyTimeout=250
 
 [Behavior]
 # 默认激活输入法
-ActiveByDefault=True
+ActiveByDefault=False
 # 重新聚焦时重置状态
 resetStateWhenFocusIn=No
 # 共享输入状态
@@ -45,9 +45,9 @@ PreeditEnabledByDefault=True
 # 切换输入法时显示输入法信息
 ShowInputMethodInformation=True
 # 在焦点更改时显示输入法信息
-showInputMethodInformationWhenFocusIn=False
+showInputMethodInformationWhenFocusIn=True
 # 显示紧凑的输入法信息
-CompactInputMethodInformation=False
+CompactInputMethodInformation=True
 # 显示第一个输入法的信息
 ShowFirstInputMethodInformation=True
 # 缺省每页候选词
