@@ -9,7 +9,9 @@ There are the configs mostly inspired by [Luke Smith's dotconfigs](https://www.g
 	- lf/ranger (file manager)
 	- imv/sxiv (image/gif viewer)
 	- zsh/sheldon (shell & plugins)
-    - transmission/rtorrent (torrent)
+	- fcitx5/rime/rime-ice/wanxiang (input method)
+    - transmission/rtorrent/qbittorrent-nox (torrent)
+    - darkman/plasma themes (autoswitch light/dark mode)
     - I try to minimize what's directly in `~` so:
 	- Some environmental variables moved into `~/.config/`
     - fontconfig, gtk settings, vcs.conf, rime/fcitx configs
