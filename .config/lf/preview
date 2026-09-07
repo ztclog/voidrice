@@ -5,7 +5,7 @@ batorcat() {
 }
 
 case "$(echo ${1##*.} | tr [:upper:] [:lower:])" in
-	a|ace|alz|apk|arc|arj|bz|bz2|cab|cpio|deb|gz|iso|jar|lha|lz|lzh|lzma|lzo|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst|rar|7z) atool -l "$1" ;;
+	a|ace|alz|apk|arc|arj|bz|bz2|cab|cpio|deb|gz|iso|jar|lha|lz|lzh|lzma|lzo|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst|rar|7z) 7z l "$1" | awk '/^------------------- -----/{++s;next} s==1&&NF{gsub(/^.{53}/,"");print}' ;;
 	torrent) transmission-show "$1" ;;
 	[1-8]|md|docx|html|odt) pandoc "$1" -t plain ;;
 	wav|mp3|flac|m4a|wma|ape|ac3|og[agx]|spx|opus|as[fx]|mka) mediainfo "$1" ;;
