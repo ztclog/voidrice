@@ -27,7 +27,7 @@ map p					# unbind p "paste"
 map pp	paste
 map pl	%ln -si $fx .
 map pL	%ln -sir $fx .
-map <c-c> $echo "$fx" | xargs -I{} echo "file://{}" | wl-copy -t text/uri-list
+map <c-c> %echo "$fx" | xargs -I{} echo "file://{}" | wl-copy -t text/uri-list && echo "COPIED!"
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
