@@ -21,7 +21,7 @@ case "$(echo ${1##*.} | tr [:upper:] [:lower:])" in
 		[ ! -f "${CACHE}.jpg" ] && ffmpegthumbnailer -i "$1" -o "${CACHE}.jpg" -s 0 -q 5
 		chafa -f sixel -s "$2x$3" --animate off --polite on "${CACHE}.jpg"
 		;;
-	bmp|jpg*|jpeg|png|xpm|webp|tiff|gif|jfif|ico)
+	bmp|jpg*|jpeg|png|xpm|webp|tiff|gif|jfif|ico|heic)
 		chafa -f sixel -s "$2x$3" --animate off --polite on "$1"
 		;;
 	svg)
