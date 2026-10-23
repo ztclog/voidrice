@@ -1,4 +1,5 @@
 set ifs "\n"
+set watch true
 set icons false
 #set sixel true
 set sortby ext
@@ -31,7 +32,7 @@ map <c-c> %echo "$fx" | xargs -I{} echo "file://{}" | wl-copy -t text/uri-list &
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
-map O $mimeopen --ask $f
+map O &{{ mime=$(file --mime-type -b "$f"); prog=$(gio mime "$mime" 2>/dev/null | sed -n 's/^\s\+//p' | sort -u | while IFS= read -r p; do printf '%s\n' "${p%.desktop}"; done | bemenu -p 'Open with:'); [ -n "$prog" ] && gtk-launch "$prog.desktop" "$f" }}
 map i $[ ! $(file -ibL $f | grep -i -e text -e ascii) ] && (mediainfo $f | bat -l yaml --color=always --paging always -p) || bat --color=always --paging always -p $f 2>/dev/null
 map <tab> $mediainfo $f | bat -l yaml --color=always --paging always -p 
 map <f-4> &dolphin --select $f
@@ -55,16 +56,20 @@ map <backspace> %lf -remote "send $id cd "$OLDPWD""
 
 # fuzzy jump & search
 cmd fzf_jump ${{
-  res="$(fd -HL . | fzf --reverse --header="Jump to location" || true)"		# fd & fzf required
+  res="$(fd -HL . | fzf --reverse --header="Jump to location" || true)"
   [ -d "$res" ] && cmd="cd" || cmd="select"
   res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
   lf -remote "send $id $cmd \"$res\""
 }}
 map F :fzf_jump
+map <c-f> :fzf_jump
 
 # image edit
-map gr !gm mogrify -monitor -rotate 90 $fx	# 图片顺时针旋转 90 度 
-map gR !gm mogrify -monitor -rotate -90 $fx	# 图片逆时针旋转 90 度
+map g<up> %exiv2 -M "set Exif.Image.Orientation 1" $fx	# 图片不旋转
+map g<down> %exiv2 -M "set Exif.Image.Orientation 3" $fx	# 图片翻转180度
+map g<right> %exiv2 -M "set Exif.Image.Orientation 6" $fx	# 图片顺时针旋转90度
+map g<left> %exiv2 -M "set Exif.Image.Orientation 8" $fx	# 图片逆时针旋转90度
+map gi !gm mogrify -monitor -format jpg -quality 90 $fx	# 图片转成jpg
 
 # rename
 cmd bulkrename ${{
@@ -87,6 +92,7 @@ map A :rename; cmd-end 			# at the very end
 map R push A<c-u> 			# new rename
 map <a-r> bulkrename			# bulkrename
 map <f-2> :rename; cmd-delete-home	# before extension & delete home
+cmap <c-tab> :cmd-enter; down; push <f-2>
 
 # chmod
 map ==   push %chmod<space><space>$fx<c-b><c-b><c-b><c-b>
@@ -96,10 +102,10 @@ map =766 %chmod 766 $fx
 
 # zip & unzip
 map zz %echo "Z -- Capitalized used for compress"
-map Zc $unzip -O CP936 $f -d ${f%.*}		# only for Chinese Charset zips
-map Zx &7z x -o${f%.*} $f			# unzip using 7z
-map Zz &7z a $f.zip $fx | grep archive		# zip: most common one
-map ZZ &7z a -mx9 $f.7z $fx | grep archive	# best compression ratio
+map Zx &7z x -o${f%.*} $f	# unzip: using 7z
+map Zc $unzip -O CP936 $f -d ${f%.*}	# unzip: Chinese Charset zips
+map Zz &7z a $f.zip $fx | grep archive	# zip: most common one
+map ZZ &7z a -mx9 $f.7z $fx | grep archive	# 7zip: best compression ratio
 
 #cmap
 cmap <tab> cmd-menu-complete
