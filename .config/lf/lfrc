@@ -65,11 +65,14 @@ map F :fzf_jump
 map <c-f> :fzf_jump
 
 # image edit
-map g<up> %exiv2 -M "set Exif.Image.Orientation 1" $fx	# 图片不旋转
-map g<down> %exiv2 -M "set Exif.Image.Orientation 3" $fx	# 图片翻转180度
-map g<right> %exiv2 -M "set Exif.Image.Orientation 6" $fx	# 图片顺时针旋转90度
-map g<left> %exiv2 -M "set Exif.Image.Orientation 8" $fx	# 图片逆时针旋转90度
+map g<up> $exiv2 -M "set Exif.Image.Orientation 1" $fx	# 图片不旋转
+map g<down> $exiv2 -M "set Exif.Image.Orientation 3" $fx	# 图片翻转180度
+map g<right> $exiv2 -M "set Exif.Image.Orientation 6" $fx	# 图片顺时针旋转90度
+map g<left> $exiv2 -M "set Exif.Image.Orientation 8" $fx	# 图片逆时针旋转90度
 map gi !gm mogrify -monitor -format jpg -quality 90 $fx	# 图片转成jpg
+
+# pdf
+map pdf push %img2pdf<space>$fx<space>-o<space>.pdf<a-b><left>
 
 # rename
 cmd bulkrename ${{
