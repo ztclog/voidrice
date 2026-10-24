@@ -32,7 +32,8 @@ map <c-c> %echo "$fx" | xargs -I{} echo "file://{}" | wl-copy -t text/uri-list &
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
-map O &{{ mime=$(file --mime-type -b "$f"); prog=$(gio mime "$mime" 2>/dev/null | sed -n 's/^\s\+//p' | sort -u | while IFS= read -r p; do printf '%s\n' "${p%.desktop}"; done | bemenu -l 10 -p 'Open with:'); [ -n "$prog" ] && gtk-launch "$prog.desktop" "$f" }}
+map O $mimeopen --ask $f 2>/dev/null
+# map O &{{ prog=$(gio mime "$(file --mime-type -b "$f")" | sed -n 's/^\s\+//p' | awk '!seen[$0]++' | bemenu -l 10 -p 'Open with:'); [ -n "$prog" ] && gtk-launch "$prog" "$f" }}
 map i $[ ! $(file -ibL $f | grep -i -e text -e ascii) ] && (mediainfo $f | bat -l yaml --color=always --paging always -p) || bat --color=always --paging always -p $f 2>/dev/null
 map <tab> $mediainfo $f | bat -l yaml --color=always --paging always -p 
 map <f-4> &dolphin --select $f
