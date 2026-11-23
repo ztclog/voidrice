@@ -1,0 +1,79 @@
+#!/usr/bin/perl
+# orient — 修改图片方向（HEIC/HEIF 同时改 EXIF Orientation 和 irot；其他格式调用 exiv2）
+# 用法: orient <1|3|6|8> <文件>...
+# 依赖: perl（系统自带）、exiv2（非 HEIC 时使用）
+use strict;
+use warnings;
+
+my %IROT = (1 => 0, 3 => 2, 6 => 3, 8 => 1);
+our ($bo16, $bo32);  # EXIF -> irot code (0/90/180/270 CCW)
+
+sub u16 { my ($d,$o)=@_; return unpack($bo16, substr($d,$o,2)); }
+sub u32 { my ($d,$o)=@_; return unpack($bo32, substr($d,$o,4)); }
+sub p16 { my ($d,$o,$v)=@_; substr($$d,$o,2,pack($bo16,$v)); }
+
+sub patch_heic {
+    my ($file, $want) = @_;
+    open my $fh, '<:raw', $file or die "无法读取 $file: $!\n";
+    local $/; my $data = <$fh>; close $fh;
+
+    # 找 TIFF/EXIF 头
+    my $t = -1;
+    for my $sig ("II*\0", "MM\0*") {
+        my $p = index($data, $sig);
+        if ($p >= 0) { $t = $p; last; }
+    }
+    die "没有找到 EXIF 方向字段: $file\n" if $t < 0;
+    $bo16 = substr($data,$t,2) eq 'II' ? 'v' : 'n';
+    $bo32 = $bo16 eq 'v' ? 'V' : 'N';
+
+    my $ifd0 = u32($data, $t+4);
+    my $n = u16($data, $t+$ifd0);
+    my $entry0 = $t + $ifd0 + 2;
+    my $found = 0;
+    for my $i (0..$n-1) {
+        my $e = $entry0 + $i*12;
+        my ($tag,$typ,$cnt) = (u16($data,$e), u16($data,$e+2), u32($data,$e+4));
+        if ($tag == 0x0112 && $typ == 3 && $cnt == 1) {
+            p16(\$data, $e+8, $want);
+            $found = 1;
+            last;
+        }
+    }
+    die "没有找到 EXIF 方向字段: $file\n" unless $found;
+
+    # 找第一处 irot（主图）
+    my $i = index($data, 'irot');
+    if ($i >= 4) {
+        my $size = unpack('N', substr($data,$i-4,4));
+        if ($size == 9) {
+            substr($data, $i+4, 1, chr($IROT{$want}));
+        } else {
+            warn "irot box 大小异常 ($size)，只改 EXIF: $file\n";
+        }
+    } elsif ($want != 1) {
+        warn "$file 没有 irot（方向已烘焙进像素），只能设为 1，已跳过\n";
+        return 0;
+    }
+
+    open my $out, '+<:raw', $file or die "无法写入 $file: $!\n";
+    seek($out, 0, 0);
+    print $out $data;
+    truncate($out, length($data));
+    close $out;
+    print "OK $file -> $want\n";
+    return 1;
+}
+
+my $want = shift @ARGV;
+die "用法: orient <1|3|6|8> <文件>...\n" unless defined $want && exists $IROT{$want};
+die "没有指定文件\n" unless @ARGV;
+
+for my $file (@ARGV) {
+    if ($file =~ /\.(?:heic|heif|hif)$/i) {
+        patch_heic($file, $want);
+    } else {
+        system('exiv2', '-M', "set Exif.Image.Orientation $want", $file) == 0
+            or warn "exiv2 修改失败: $file\n";
+    }
+}
